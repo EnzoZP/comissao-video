@@ -2,7 +2,7 @@ import "./index.css";
 import React from "react";
 import { Composition, Folder } from "remotion";
 import { ALTURA, CENAS, DURACAO_TOTAL, FPS, LARGURA, quadros } from "./roteiro";
-import { COMPONENTES, ComCamadas, Video } from "./Video";
+import { COMPONENTES, ComCamadas, Video, VideoComMusica } from "./Video";
 
 // Cada cena também vira uma composição própria, com fundo e acabamento, para abrir e
 // ajustar sozinha no Studio. Montado uma vez, fora do render.
@@ -21,6 +21,14 @@ export const RemotionRoot: React.FC = () => (
     <Composition
       id="Comissao"
       component={Video}
+      durationInFrames={DURACAO_TOTAL}
+      fps={FPS}
+      width={LARGURA}
+      height={ALTURA}
+    />
+    <Composition
+      id="ComissaoMusica"
+      component={VideoComMusica}
       durationInFrames={DURACAO_TOTAL}
       fps={FPS}
       width={LARGURA}

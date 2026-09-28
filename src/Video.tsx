@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Series } from "remotion";
+import { AbsoluteFill, Html5Audio, Series, staticFile } from "remotion";
 import { CENAS, type CenaId, quadros } from "./roteiro";
 import { Acabamento, Fundo } from "./componentes/Camadas";
 import { C01Abertura } from "./cenas/C01Abertura";
@@ -56,4 +56,16 @@ export const Video: React.FC = () => (
       })}
     </Series>
   </ComCamadas>
+);
+
+// Versão com fundo musical. A trilha é gerada por scripts/gerar-trilha.mjs em
+// public/trilha.wav (fora do git) e entra baixa (volume 0,2 ≈ -14 dB), para ficar
+// por baixo de uma narração gravada depois.
+export const VOLUME_TRILHA = 0.2;
+
+export const VideoComMusica: React.FC = () => (
+  <>
+    <Video />
+    <Html5Audio src={staticFile("trilha.wav")} volume={VOLUME_TRILHA} />
+  </>
 );

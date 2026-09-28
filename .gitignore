@@ -10,3 +10,6 @@ out
 .agents/
 .claude/skills/
 skills-lock.json
+
+# Trilha gerada por scripts/gerar-trilha.mjs (15 MB; regenerável)
+public/trilha.wav
