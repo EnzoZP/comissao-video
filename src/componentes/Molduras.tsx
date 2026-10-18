@@ -121,9 +121,19 @@ export const Navegador: React.FC<{
   largura: number;
   altura: number;
   escala: number; // px de vídeo por px CSS do painel
+  endereco?: string; // texto da barra de endereço
   style?: React.CSSProperties;
   children: React.ReactNode;
-}> = ({ x, y, largura, altura, escala, style, children }) => (
+}> = ({
+  x,
+  y,
+  largura,
+  altura,
+  escala,
+  endereco = "Painel da secretaria",
+  style,
+  children,
+}) => (
   <div
     style={{
       position: "absolute",
@@ -178,7 +188,7 @@ export const Navegador: React.FC<{
         }}
       >
         <IconeCadeado cor={theme.cores.textoSuave} />
-        Painel da secretaria
+        {endereco}
       </div>
     </div>
     <div

@@ -18,6 +18,8 @@ export const theme = {
     texto: "#16181d",
     textoSuave: "#5a6170",
     destaque: "#1d4ed8", // A cor de destaque do vídeo: no máximo um elemento por quadro
+    // anel e clique do tutorial: o app é todo em azul, então o que o vídeo aponta é laranja
+    anel: "#ea580c",
     destaqueTexto: "#ffffff",
     neutro: "#e4e7ec",
     sim: "#15803d",
@@ -53,6 +55,7 @@ export const theme = {
   // sombras e brilhos (rgba derivados da paleta acima)
   efeitos: {
     brilhoDestaque: "rgba(29, 78, 216, 0.45)",
+    brilhoAnel: "rgba(234, 88, 12, 0.4)",
     brilhoDestaqueFraco: "rgba(29, 78, 216, 0.18)",
     brilhoTelao: "rgba(59, 130, 246, 0.55)",
     manchaA: "rgba(29, 78, 216, 0.16)",
@@ -74,6 +77,7 @@ export const theme = {
     cursorCorpo: "#16181d",
     toque: "rgba(29, 78, 216, 0.28)",
     toqueAnel: "rgba(29, 78, 216, 0.55)",
+    toqueClaro: "rgba(255, 255, 255, 0.6)",
   },
   fonte: fontFamily,
   raio: 12,

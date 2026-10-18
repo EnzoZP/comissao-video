@@ -1,0 +1,3111 @@
+{
+ "convite-vazio": {
+  "arquivo": "tutorial/capturas/convite-vazio.png",
+  "aparelho": "painel",
+  "caminho": "/convite",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "form": {
+    "x": 253,
+    "y": 218,
+    "w": 934,
+    "h": 389.5
+   },
+   "nome": {
+    "x": 253,
+    "y": 247.2,
+    "w": 934,
+    "h": 47.2
+   },
+   "email": {
+    "x": 253,
+    "y": 333.6,
+    "w": 934,
+    "h": 47.2
+   },
+   "senha": {
+    "x": 253,
+    "y": 420,
+    "w": 934,
+    "h": 47.2
+   },
+   "confirmacao": {
+    "x": 253,
+    "y": 506.3,
+    "w": 934,
+    "h": 47.2
+   },
+   "criar": {
+    "x": 253,
+    "y": 563.5,
+    "w": 171.6,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "convite-preenchido": {
+  "arquivo": "tutorial/capturas/convite-preenchido.png",
+  "aparelho": "painel",
+  "caminho": "/convite",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "form": {
+    "x": 253,
+    "y": 218,
+    "w": 934,
+    "h": 389.5
+   },
+   "nome": {
+    "x": 253,
+    "y": 247.2,
+    "w": 934,
+    "h": 47.2
+   },
+   "email": {
+    "x": 253,
+    "y": 333.6,
+    "w": 934,
+    "h": 47.2
+   },
+   "senha": {
+    "x": 253,
+    "y": 420,
+    "w": 934,
+    "h": 47.2
+   },
+   "confirmacao": {
+    "x": 253,
+    "y": 506.3,
+    "w": 934,
+    "h": 47.2
+   },
+   "criar": {
+    "x": 253,
+    "y": 563.5,
+    "w": 171.6,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-inicio": {
+  "arquivo": "tutorial/capturas/painel-inicio.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "barra": {
+    "x": 100,
+    "y": 84,
+    "w": 1240,
+    "h": 53
+   },
+   "selo": {
+    "x": 116,
+    "y": 95.9,
+    "w": 169.2,
+    "h": 28.2
+   },
+   "sair": {
+    "x": 1271.4,
+    "y": 92,
+    "w": 52.6,
+    "h": 36
+   },
+   "tema": {
+    "x": 1063.1,
+    "y": 92,
+    "w": 200.3,
+    "h": 36
+   },
+   "agora": {
+    "x": 116,
+    "y": 157,
+    "w": 715.2,
+    "h": 427.5
+   },
+   "pautas": {
+    "x": 847.2,
+    "y": 157,
+    "w": 476.8,
+    "h": 209.6
+   },
+   "lideres": {
+    "x": 815.1,
+    "y": 92,
+    "w": 138.1,
+    "h": 36
+   },
+   "feedback": {
+    "x": 961.2,
+    "y": 92,
+    "w": 93.9,
+    "h": 36
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "login-vazio": {
+  "arquivo": "tutorial/capturas/login-vazio.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "form": {
+    "x": 133,
+    "y": 139.9,
+    "w": 1174,
+    "h": 251.9
+   },
+   "email": {
+    "x": 133,
+    "y": 169.1,
+    "w": 1174,
+    "h": 47.2
+   },
+   "senha": {
+    "x": 133,
+    "y": 255.4,
+    "w": 1174,
+    "h": 47.2
+   },
+   "lembrar": {
+    "x": 133,
+    "y": 312.6,
+    "w": 1174,
+    "h": 25.2
+   },
+   "entrar": {
+    "x": 133,
+    "y": 347.8,
+    "w": 78.5,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "login-digitado": {
+  "arquivo": "tutorial/capturas/login-digitado.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "form": {
+    "x": 133,
+    "y": 139.9,
+    "w": 1174,
+    "h": 251.9
+   },
+   "email": {
+    "x": 133,
+    "y": 169.1,
+    "w": 1174,
+    "h": 47.2
+   },
+   "senha": {
+    "x": 133,
+    "y": 255.4,
+    "w": 1174,
+    "h": 47.2
+   },
+   "lembrar": {
+    "x": 133,
+    "y": 312.6,
+    "w": 1174,
+    "h": 25.2
+   },
+   "entrar": {
+    "x": 133,
+    "y": 347.8,
+    "w": 78.5,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "login-preenchido": {
+  "arquivo": "tutorial/capturas/login-preenchido.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "form": {
+    "x": 133,
+    "y": 139.9,
+    "w": 1174,
+    "h": 251.9
+   },
+   "email": {
+    "x": 133,
+    "y": 169.1,
+    "w": 1174,
+    "h": 47.2
+   },
+   "senha": {
+    "x": 133,
+    "y": 255.4,
+    "w": 1174,
+    "h": 47.2
+   },
+   "lembrar": {
+    "x": 133,
+    "y": 312.6,
+    "w": 1174,
+    "h": 25.2
+   },
+   "entrar": {
+    "x": 133,
+    "y": 347.8,
+    "w": 78.5,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-membros-vazio": {
+  "arquivo": "tutorial/capturas/painel-membros-vazio.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "secao": {
+    "x": 133,
+    "y": 72.1,
+    "w": 1174,
+    "h": 433.3
+   },
+   "aqui": {
+    "x": 152,
+    "y": 93.1,
+    "w": 151.7,
+    "h": 25
+   },
+   "campo": {
+    "x": 152,
+    "y": 309.7,
+    "w": 1136,
+    "h": 122.8
+   },
+   "adicionar": {
+    "x": 152,
+    "y": 442.5,
+    "w": 185.6,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-membros-digitados": {
+  "arquivo": "tutorial/capturas/painel-membros-digitados.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "secao": {
+    "x": 133,
+    "y": 72.1,
+    "w": 1174,
+    "h": 433.3
+   },
+   "aqui": {
+    "x": 152,
+    "y": 93.1,
+    "w": 151.7,
+    "h": 25
+   },
+   "campo": {
+    "x": 152,
+    "y": 309.7,
+    "w": 1136,
+    "h": 122.8
+   },
+   "adicionar": {
+    "x": 152,
+    "y": 442.5,
+    "w": 185.6,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-membros-lista": {
+  "arquivo": "tutorial/capturas/painel-membros-lista.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "lista": {
+    "x": 150,
+    "y": 186.3,
+    "w": 1140,
+    "h": 713.7
+   },
+   "copiar": {
+    "x": 828,
+    "y": 197.3,
+    "w": 114.8,
+    "h": 44
+   },
+   "novo": {
+    "x": 948.8,
+    "y": 197.3,
+    "w": 103.7,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-telao-passo": {
+  "arquivo": "tutorial/capturas/painel-telao-passo.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "secao": {
+    "x": 133,
+    "y": 242.3,
+    "w": 1174,
+    "h": 252.2
+   },
+   "gerar": {
+    "x": 150,
+    "y": 303.3,
+    "w": 176,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-telao-link": {
+  "arquivo": "tutorial/capturas/painel-telao-link.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "secao": {
+    "x": 133,
+    "y": 242.3,
+    "w": 1174,
+    "h": 252.2
+   },
+   "abrir": {
+    "x": 377.4,
+    "y": 303.3,
+    "w": 145.4,
+    "h": 44
+   },
+   "codigo": {
+    "x": 150,
+    "y": 433.5,
+    "w": 134.4,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-aguardando": {
+  "arquivo": "tutorial/capturas/telao-aguardando.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "telao": {
+    "x": 0,
+    "y": 0,
+    "w": 1920,
+    "h": 1080
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-telao-codigo": {
+  "arquivo": "tutorial/capturas/painel-telao-codigo.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "codigo": {
+    "x": 150,
+    "y": 273.5,
+    "w": 1140,
+    "h": 56
+   },
+   "bloco": {
+    "x": 150,
+    "y": 273.5,
+    "w": 1140,
+    "h": 204.4
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-codigo-vazio": {
+  "arquivo": "tutorial/capturas/telao-codigo-vazio.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "campo": {
+    "x": 612.7,
+    "y": 532.8,
+    "w": 580.8,
+    "h": 156.4
+   },
+   "entrar": {
+    "x": 1197.6,
+    "y": 610.8,
+    "w": 109.7,
+    "h": 58
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-codigo-digitado": {
+  "arquivo": "tutorial/capturas/telao-codigo-digitado.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "campo": {
+    "x": 612.7,
+    "y": 532.8,
+    "w": 580.8,
+    "h": 156.4
+   },
+   "entrar": {
+    "x": 1197.6,
+    "y": 610.8,
+    "w": 109.7,
+    "h": 58
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-entrada-fechada": {
+  "arquivo": "tutorial/capturas/painel-entrada-fechada.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "secao": {
+    "x": 133,
+    "y": 510.8,
+    "w": 1174,
+    "h": 171.2
+   },
+   "abrir": {
+    "x": 150,
+    "y": 621,
+    "w": 203.4,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)",
+  "dialogo": "Abrir a entrada pelo QR? Todos precisarão tocar no nome de novo (quem já tem o app aberto entra direto)."
+ },
+ "painel-entrada-aberta": {
+  "arquivo": "tutorial/capturas/painel-entrada-aberta.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "secao": {
+    "x": 133,
+    "y": 219.5,
+    "w": 1174,
+    "h": 462.4
+   },
+   "qr": {
+    "x": 150,
+    "y": 280.5,
+    "w": 220,
+    "h": 220
+   },
+   "curto": {
+    "x": 780.1,
+    "y": 579.7,
+    "w": 84,
+    "h": 21
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-qr-0": {
+  "arquivo": "tutorial/capturas/telao-qr-0.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "qr": {
+    "x": 48,
+    "y": 223.8,
+    "w": 669.6,
+    "h": 669.6
+   },
+   "passos": {
+    "x": 765.6,
+    "y": 223.8,
+    "w": 1106.4,
+    "h": 212.7
+   },
+   "curto": {
+    "x": 765.6,
+    "y": 459.5,
+    "w": 1106.4,
+    "h": 150.7
+   },
+   "grade": {
+    "x": 765.6,
+    "y": 633.2,
+    "w": 1106.4,
+    "h": 382.8
+   },
+   "selo": {
+    "x": 1524.9,
+    "y": 27,
+    "w": 347.1,
+    "h": 78
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-entrar-lista": {
+  "arquivo": "tutorial/capturas/celular-entrar-lista.png",
+  "aparelho": "celular",
+  "caminho": "/entrar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "ana": {
+    "x": 37,
+    "y": 211.4,
+    "w": 316,
+    "h": 72
+   },
+   "lista": {
+    "x": 37,
+    "y": 211.4,
+    "w": 316,
+    "h": 578.6
+   }
+  },
+  "fundo": "rgb(244, 245, 247)",
+  "dialogo": "Você é Ana?"
+ },
+ "celular-aguardando": {
+  "arquivo": "tutorial/capturas/celular-aguardando.png",
+  "aparelho": "celular",
+  "caminho": "/votar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "saudacao": {
+    "x": 16,
+    "y": 98.4,
+    "w": 358,
+    "h": 31.4
+   },
+   "status": {
+    "x": 16,
+    "y": 145.8,
+    "w": 358,
+    "h": 82.6
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-qr-7": {
+  "arquivo": "tutorial/capturas/telao-qr-7.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "qr": {
+    "x": 48,
+    "y": 232.3,
+    "w": 669.6,
+    "h": 669.6
+   },
+   "passos": {
+    "x": 765.6,
+    "y": 232.3,
+    "w": 1106.4,
+    "h": 221.8
+   },
+   "curto": {
+    "x": 765.6,
+    "y": 478.1,
+    "w": 1106.4,
+    "h": 157.1
+   },
+   "grade": {
+    "x": 765.6,
+    "y": 659.2,
+    "w": 1106.4,
+    "h": 356.7
+   },
+   "selo": {
+    "x": 1513.6,
+    "y": 27,
+    "w": 358.4,
+    "h": 81.3
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-codigo-vazio": {
+  "arquivo": "tutorial/capturas/celular-codigo-vazio.png",
+  "aparelho": "celular",
+  "caminho": "/entrar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "campo": {
+    "x": 37,
+    "y": 232,
+    "w": 316,
+    "h": 66.8
+   },
+   "entrar": {
+    "x": 37,
+    "y": 314.8,
+    "w": 316,
+    "h": 64
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-codigo-digitado": {
+  "arquivo": "tutorial/capturas/celular-codigo-digitado.png",
+  "aparelho": "celular",
+  "caminho": "/entrar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "campo": {
+    "x": 37,
+    "y": 232,
+    "w": 316,
+    "h": 66.8
+   },
+   "entrar": {
+    "x": 37,
+    "y": 314.8,
+    "w": 316,
+    "h": 64
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-curto-lista": {
+  "arquivo": "tutorial/capturas/celular-curto-lista.png",
+  "aparelho": "celular",
+  "caminho": "/entrar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "bruno": {
+    "x": 37,
+    "y": 211.4,
+    "w": 316,
+    "h": 72
+   },
+   "lista": {
+    "x": 37,
+    "y": 211.4,
+    "w": 316,
+    "h": 408
+   }
+  },
+  "fundo": "rgb(244, 245, 247)",
+  "dialogo": "Você é Bruno?"
+ },
+ "celular-curto-aguardando": {
+  "arquivo": "tutorial/capturas/celular-curto-aguardando.png",
+  "aparelho": "celular",
+  "caminho": "/votar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "saudacao": {
+    "x": 16,
+    "y": 98.4,
+    "w": 358,
+    "h": 31.4
+   },
+   "status": {
+    "x": 16,
+    "y": 145.8,
+    "w": 358,
+    "h": 82.6
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-qr-8": {
+  "arquivo": "tutorial/capturas/telao-qr-8.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "qr": {
+    "x": 48,
+    "y": 232.3,
+    "w": 669.6,
+    "h": 669.6
+   },
+   "passos": {
+    "x": 765.6,
+    "y": 232.3,
+    "w": 1106.4,
+    "h": 221.8
+   },
+   "curto": {
+    "x": 765.6,
+    "y": 478.1,
+    "w": 1106.4,
+    "h": 157.1
+   },
+   "grade": {
+    "x": 765.6,
+    "y": 659.2,
+    "w": 1106.4,
+    "h": 356.7
+   },
+   "selo": {
+    "x": 1510.5,
+    "y": 27,
+    "w": 361.5,
+    "h": 81.3
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-membros-liberar": {
+  "arquivo": "tutorial/capturas/painel-membros-liberar.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "linha": {
+    "x": 150,
+    "y": 220.3,
+    "w": 1140,
+    "h": 66
+   },
+   "liberar": {
+    "x": 735.8,
+    "y": 231.3,
+    "w": 86.2,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)",
+  "dialogo": "Liberar Carla? O celular que entrou com esse nome perde o acesso e o nome volta para a lista do QR."
+ },
+ "celular-entrar-lista-depois": {
+  "arquivo": "tutorial/capturas/celular-entrar-lista-depois.png",
+  "aparelho": "celular",
+  "caminho": "/entrar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "carla": {
+    "x": 37,
+    "y": 211.4,
+    "w": 316,
+    "h": 72
+   },
+   "lista": {
+    "x": 37,
+    "y": 211.4,
+    "w": 316,
+    "h": 408
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-tema-escuro": {
+  "arquivo": "tutorial/capturas/painel-tema-escuro.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "tema": {
+    "x": 1063.1,
+    "y": 92,
+    "w": 200.3,
+    "h": 36
+   },
+   "barra": {
+    "x": 100,
+    "y": 84,
+    "w": 1240,
+    "h": 53
+   }
+  },
+  "fundo": "rgb(11, 13, 17)"
+ },
+ "telao-qr-escuro": {
+  "arquivo": "tutorial/capturas/telao-qr-escuro.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "qr": {
+    "x": 48,
+    "y": 232.3,
+    "w": 669.6,
+    "h": 669.6
+   },
+   "passos": {
+    "x": 765.6,
+    "y": 232.3,
+    "w": 1106.4,
+    "h": 221.8
+   },
+   "curto": {
+    "x": 765.6,
+    "y": 478.1,
+    "w": 1106.4,
+    "h": 157.1
+   },
+   "grade": {
+    "x": 765.6,
+    "y": 659.2,
+    "w": 1106.4,
+    "h": 356.7
+   },
+   "selo": {
+    "x": 1510.5,
+    "y": 27,
+    "w": 361.5,
+    "h": 81.3
+   }
+  },
+  "fundo": "rgb(11, 13, 17)"
+ },
+ "painel-pautas-vazio": {
+  "arquivo": "tutorial/capturas/painel-pautas-vazio.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "coluna": {
+    "x": 847.2,
+    "y": 157,
+    "w": 476.8,
+    "h": 464.5
+   },
+   "campo": {
+    "x": 866.2,
+    "y": 425.8,
+    "w": 438.8,
+    "h": 122.8
+   },
+   "adicionar": {
+    "x": 866.2,
+    "y": 558.5,
+    "w": 164.2,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-pautas-digitadas": {
+  "arquivo": "tutorial/capturas/painel-pautas-digitadas.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "coluna": {
+    "x": 847.2,
+    "y": 157,
+    "w": 476.8,
+    "h": 464.5
+   },
+   "campo": {
+    "x": 866.2,
+    "y": 425.8,
+    "w": 438.8,
+    "h": 122.8
+   },
+   "adicionar": {
+    "x": 866.2,
+    "y": 558.5,
+    "w": 164.2,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-pautas-lista": {
+  "arquivo": "tutorial/capturas/painel-pautas-lista.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "lista": {
+    "x": 864.2,
+    "y": 257.2,
+    "w": 442.8,
+    "h": 642.8
+   },
+   "comecar": {
+    "x": 133,
+    "y": 401.6,
+    "w": 316.7,
+    "h": 58
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-indicacao-vazia": {
+  "arquivo": "tutorial/capturas/painel-indicacao-vazia.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "agora": {
+    "x": 116,
+    "y": 157,
+    "w": 715.2,
+    "h": 624.9
+   },
+   "campo": {
+    "x": 135,
+    "y": 319.7,
+    "w": 564,
+    "h": 47.8
+   },
+   "adicionar": {
+    "x": 707,
+    "y": 321.5,
+    "w": 105.2,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-indicacao-vazia": {
+  "arquivo": "tutorial/capturas/telao-indicacao-vazia.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "topo": {
+    "x": 48,
+    "y": 27,
+    "w": 1600.8,
+    "h": 482.8
+   },
+   "canto": {
+    "x": 1677.6,
+    "y": 783.5,
+    "w": 194.4,
+    "h": 269.5
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-indicacao-digitando": {
+  "arquivo": "tutorial/capturas/painel-indicacao-digitando.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "campo": {
+    "x": 135,
+    "y": 319.7,
+    "w": 564,
+    "h": 47.8
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-indicacao-3": {
+  "arquivo": "tutorial/capturas/painel-indicacao-3.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "lista": {
+    "x": 135,
+    "y": 379.4,
+    "w": 677.2,
+    "h": 53.4
+   },
+   "tirar": {
+    "x": 193.8,
+    "y": 384.1,
+    "w": 30.1,
+    "h": 44
+   },
+   "form": {
+    "x": 135,
+    "y": 452.8,
+    "w": 677.2,
+    "h": 259.3
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-indicacao-3": {
+  "arquivo": "tutorial/capturas/telao-indicacao-3.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "indicados": {
+    "x": 48,
+    "y": 547.5,
+    "w": 1600.8,
+    "h": 310.8
+   },
+   "topo": {
+    "x": 48,
+    "y": 27,
+    "w": 1600.8,
+    "h": 436
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-indicacao": {
+  "arquivo": "tutorial/capturas/celular-indicacao.png",
+  "aparelho": "celular",
+  "caminho": "/votar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "cartao": {
+    "x": 16,
+    "y": 145.8,
+    "w": 358,
+    "h": 214.7
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-como-votar": {
+  "arquivo": "tutorial/capturas/painel-como-votar.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "form": {
+    "x": 135,
+    "y": 119.8,
+    "w": 677.2,
+    "h": 259.3
+   },
+   "modo": {
+    "x": 135,
+    "y": 205.8,
+    "w": 677.2,
+    "h": 45
+   },
+   "secreto": {
+    "x": 135,
+    "y": 260.8,
+    "w": 677.2,
+    "h": 50.4
+   },
+   "colocar": {
+    "x": 135,
+    "y": 321.1,
+    "w": 239.8,
+    "h": 58
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-como-votar-aberto": {
+  "arquivo": "tutorial/capturas/painel-como-votar-aberto.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "form": {
+    "x": 135,
+    "y": 119.8,
+    "w": 677.2,
+    "h": 259.3
+   },
+   "modo": {
+    "x": 135,
+    "y": 205.8,
+    "w": 677.2,
+    "h": 45
+   },
+   "secreto": {
+    "x": 135,
+    "y": 260.8,
+    "w": 677.2,
+    "h": 50.4
+   },
+   "colocar": {
+    "x": 135,
+    "y": 321.1,
+    "w": 239.8,
+    "h": 58
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-votacao-nomes": {
+  "arquivo": "tutorial/capturas/celular-votacao-nomes.png",
+  "aparelho": "celular",
+  "caminho": "/votar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "sergio": {
+    "x": 37,
+    "y": 415.6,
+    "w": 316,
+    "h": 72
+   },
+   "abster": {
+    "x": 37,
+    "y": 503.6,
+    "w": 316,
+    "h": 52
+   },
+   "opcoes": {
+    "x": 37,
+    "y": 247.6,
+    "w": 316,
+    "h": 240
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-votou": {
+  "arquivo": "tutorial/capturas/celular-votou.png",
+  "aparelho": "celular",
+  "caminho": "/votar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "status": {
+    "x": 37,
+    "y": 571.6,
+    "w": 316,
+    "h": 49.3
+   },
+   "sergio": {
+    "x": 37,
+    "y": 415.6,
+    "w": 316,
+    "h": 72
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-votacao-aberta": {
+  "arquivo": "tutorial/capturas/telao-votacao-aberta.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "grade": {
+    "x": 48,
+    "y": 291.6,
+    "w": 1600.8,
+    "h": 452.1
+   },
+   "barras": {
+    "x": 48,
+    "y": 776.5,
+    "w": 1088.3,
+    "h": 239.5
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-votacao-faltam": {
+  "arquivo": "tutorial/capturas/painel-votacao-faltam.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "faltam": {
+    "x": 135,
+    "y": 440.7,
+    "w": 677.2,
+    "h": 54
+   },
+   "agora": {
+    "x": 116,
+    "y": 157,
+    "w": 715.2,
+    "h": 743
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-registrar-joao": {
+  "arquivo": "tutorial/capturas/painel-registrar-joao.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "linha": {
+    "x": 135,
+    "y": 300.4,
+    "w": 677.2,
+    "h": 66
+   },
+   "sergio": {
+    "x": 595.7,
+    "y": 311.4,
+    "w": 81.5,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-registrado": {
+  "arquivo": "tutorial/capturas/telao-registrado.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "joao": {
+    "x": 48,
+    "y": 619.8,
+    "w": 517.2,
+    "h": 134.9
+   },
+   "grade": {
+    "x": 48,
+    "y": 279.8,
+    "w": 1600.8,
+    "h": 474.9
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-votacao-todos": {
+  "arquivo": "tutorial/capturas/painel-votacao-todos.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "todos": {
+    "x": 135,
+    "y": 440.7,
+    "w": 677.2,
+    "h": 49.8
+   },
+   "encerrar": {
+    "x": 135,
+    "y": 384.7,
+    "w": 166.6,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-resultado-musica": {
+  "arquivo": "tutorial/capturas/telao-resultado-musica.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "resultado": {
+    "x": 48,
+    "y": 615.4,
+    "w": 1600.8,
+    "h": 168.9
+   },
+   "barras": {
+    "x": 48,
+    "y": 805.9,
+    "w": 1146.7,
+    "h": 209.3
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-registre": {
+  "arquivo": "tutorial/capturas/painel-registre.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "caixa": {
+    "x": 135,
+    "y": 119.7,
+    "w": 677.2,
+    "h": 417.3
+   },
+   "cargo": {
+    "x": 135,
+    "y": 436,
+    "w": 520,
+    "h": 45
+   },
+   "confirmar": {
+    "x": 135,
+    "y": 493,
+    "w": 219.2,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-registrado": {
+  "arquivo": "tutorial/capturas/painel-registrado.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "registrado": {
+    "x": 135,
+    "y": 119.7,
+    "w": 677.2,
+    "h": 105.2
+   },
+   "desfazer": {
+    "x": 350.1,
+    "y": 168.9,
+    "w": 167.6,
+    "h": 44
+   },
+   "proxima": {
+    "x": 135,
+    "y": 240.9,
+    "w": 250,
+    "h": 58
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-simnao": {
+  "arquivo": "tutorial/capturas/celular-simnao.png",
+  "aparelho": "celular",
+  "caminho": "/votar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "sim": {
+    "x": 37,
+    "y": 247.6,
+    "w": 316,
+    "h": 72
+   },
+   "nao": {
+    "x": 37,
+    "y": 331.6,
+    "w": 316,
+    "h": 72
+   },
+   "abster": {
+    "x": 37,
+    "y": 419.6,
+    "w": 316,
+    "h": 52
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-simnao-aberta": {
+  "arquivo": "tutorial/capturas/telao-simnao-aberta.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "grade": {
+    "x": 48,
+    "y": 306.3,
+    "w": 1600.8,
+    "h": 509.4
+   },
+   "barras": {
+    "x": 48,
+    "y": 850.5,
+    "w": 1094.2,
+    "h": 164.7
+   },
+   "canto": {
+    "x": 1677.6,
+    "y": 783.5,
+    "w": 194.4,
+    "h": 269.5
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-qr-atrasado": {
+  "arquivo": "tutorial/capturas/painel-qr-atrasado.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "mostrar": {
+    "x": 135,
+    "y": 499.7,
+    "w": 205.1,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-qr-ligado": {
+  "arquivo": "tutorial/capturas/painel-qr-ligado.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "faixa": {
+    "x": 135,
+    "y": 253,
+    "w": 677.2,
+    "h": 64
+   },
+   "voltar": {
+    "x": 501.7,
+    "y": 263,
+    "w": 227.8,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-qr-atrasado": {
+  "arquivo": "tutorial/capturas/telao-qr-atrasado.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "qr": {
+    "x": 48,
+    "y": 232.3,
+    "w": 669.6,
+    "h": 669.6
+   },
+   "passos": {
+    "x": 765.6,
+    "y": 232.3,
+    "w": 1106.4,
+    "h": 221.8
+   },
+   "curto": {
+    "x": 765.6,
+    "y": 478.1,
+    "w": 1106.4,
+    "h": 157.1
+   },
+   "grade": {
+    "x": 765.6,
+    "y": 659.2,
+    "w": 1106.4,
+    "h": 356.7
+   },
+   "selo": {
+    "x": 1498.3,
+    "y": 27,
+    "w": 373.7,
+    "h": 81.3
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-abstencao": {
+  "arquivo": "tutorial/capturas/celular-abstencao.png",
+  "aparelho": "celular",
+  "caminho": "/votar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "abster": {
+    "x": 37,
+    "y": 419.6,
+    "w": 316,
+    "h": 52
+   },
+   "status": {
+    "x": 37,
+    "y": 487.6,
+    "w": 316,
+    "h": 49.3
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-abstencao": {
+  "arquivo": "tutorial/capturas/telao-abstencao.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "ana": {
+    "x": 48,
+    "y": 306.3,
+    "w": 515.5,
+    "h": 104.4
+   },
+   "contagem": {
+    "x": 816,
+    "y": 928.5,
+    "w": 832.8,
+    "h": 86.7
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-registrar-abstencao": {
+  "arquivo": "tutorial/capturas/painel-registrar-abstencao.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "linha": {
+    "x": 135,
+    "y": 299.7,
+    "w": 677.2,
+    "h": 66
+   },
+   "abstencao": {
+    "x": 683.2,
+    "y": 310.7,
+    "w": 116,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-aprovado": {
+  "arquivo": "tutorial/capturas/telao-aprovado.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "resultado": {
+    "x": 48,
+    "y": 687.1,
+    "w": 1600.8,
+    "h": 170.1
+   },
+   "barras": {
+    "x": 48,
+    "y": 878.9,
+    "w": 824.3,
+    "h": 137
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-indicacao-adiar": {
+  "arquivo": "tutorial/capturas/painel-indicacao-adiar.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "adiar": {
+    "x": 382.8,
+    "y": 508.1,
+    "w": 179.9,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)",
+  "dialogo": "Deixar esta pauta para depois? Ela volta para a lista com os nomes indicados."
+ },
+ "painel-pautas-adiada": {
+  "arquivo": "tutorial/capturas/painel-pautas-adiada.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "comunicacao": {
+    "x": 864.2,
+    "y": 433.5,
+    "w": 442.8,
+    "h": 99.2
+   },
+   "lista": {
+    "x": 864.2,
+    "y": 0,
+    "w": 442.8,
+    "h": 842.6
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-votacao-corrigir": {
+  "arquivo": "tutorial/capturas/painel-votacao-corrigir.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "corrigir": {
+    "x": 640.2,
+    "y": 292.9,
+    "w": 172,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)",
+  "dialogo": "Voltar às indicações para corrigir os nomes? Os votos já dados nesta pauta serão apagados."
+ },
+ "painel-secreto-marcado": {
+  "arquivo": "tutorial/capturas/painel-secreto-marcado.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "secreto": {
+    "x": 135,
+    "y": 260.8,
+    "w": 677.2,
+    "h": 50.4
+   },
+   "form": {
+    "x": 135,
+    "y": 119.8,
+    "w": 677.2,
+    "h": 259.3
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-secreto": {
+  "arquivo": "tutorial/capturas/celular-secreto.png",
+  "aparelho": "celular",
+  "caminho": "/votar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "aviso": {
+    "x": 37,
+    "y": 201.8,
+    "w": 316,
+    "h": 67.2
+   },
+   "status": {
+    "x": 37,
+    "y": 664.8,
+    "w": 316,
+    "h": 49.3
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-secreta-aberta": {
+  "arquivo": "tutorial/capturas/painel-secreta-aberta.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "agora": {
+    "x": 116,
+    "y": 157,
+    "w": 715.2,
+    "h": 743
+   },
+   "faltam": {
+    "x": 135,
+    "y": 388.7,
+    "w": 677.2,
+    "h": 90
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-secreta-aberta": {
+  "arquivo": "tutorial/capturas/telao-secreta-aberta.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "grade": {
+    "x": 48,
+    "y": 297.3,
+    "w": 1600.8,
+    "h": 600.5
+   },
+   "selo": {
+    "x": 883.9,
+    "y": 27,
+    "w": 765,
+    "h": 106.9
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-secreta-resultado": {
+  "arquivo": "tutorial/capturas/telao-secreta-resultado.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "resultado": {
+    "x": 48,
+    "y": 615.4,
+    "w": 1600.8,
+    "h": 168.9
+   },
+   "grade": {
+    "x": 48,
+    "y": 256.6,
+    "w": 1600.8,
+    "h": 330.1
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-reabrir": {
+  "arquivo": "tutorial/capturas/painel-reabrir.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "reabrir": {
+    "x": 315.6,
+    "y": 384.7,
+    "w": 87.5,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)",
+  "dialogo": "Reabrir \"Ministério Jovem\"? Os votos dela serão apagados e todos votam de novo."
+ },
+ "painel-reaberto": {
+  "arquivo": "tutorial/capturas/painel-reaberto.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "agora": {
+    "x": 116,
+    "y": 157,
+    "w": 715.2,
+    "h": 743
+   },
+   "encerrar": {
+    "x": 465.6,
+    "y": 292.9,
+    "w": 166.6,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-sem-conexao": {
+  "arquivo": "tutorial/capturas/painel-sem-conexao.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "aviso": {
+    "x": 116,
+    "y": 157,
+    "w": 1208,
+    "h": 49.2
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-fora-da-lista": {
+  "arquivo": "tutorial/capturas/painel-fora-da-lista.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "campo": {
+    "x": 135,
+    "y": 499.7,
+    "w": 388.4,
+    "h": 47.2
+   },
+   "criar": {
+    "x": 531.4,
+    "y": 489.1,
+    "w": 123.6,
+    "h": 68.4
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-pauta-criada": {
+  "arquivo": "tutorial/capturas/painel-pauta-criada.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "agora": {
+    "x": 116,
+    "y": 157,
+    "w": 715.2,
+    "h": 624.9
+   },
+   "campo": {
+    "x": 135,
+    "y": 319.7,
+    "w": 564,
+    "h": 47.8
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-modo-ordem": {
+  "arquivo": "tutorial/capturas/painel-modo-ordem.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "modo": {
+    "x": 135,
+    "y": 205.8,
+    "w": 677.2,
+    "h": 45
+   },
+   "form": {
+    "x": 135,
+    "y": 119.8,
+    "w": 677.2,
+    "h": 259.3
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-ordem": {
+  "arquivo": "tutorial/capturas/celular-ordem.png",
+  "aparelho": "celular",
+  "caminho": "/votar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "subir": {
+    "x": 242,
+    "y": 540.9,
+    "w": 48,
+    "h": 48
+   },
+   "lista": {
+    "x": 37,
+    "y": 393.9,
+    "w": 316,
+    "h": 202
+   },
+   "enviar": {
+    "x": 37,
+    "y": 611.9,
+    "w": 316,
+    "h": 64
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-ordem-mexida": {
+  "arquivo": "tutorial/capturas/celular-ordem-mexida.png",
+  "aparelho": "celular",
+  "caminho": "/votar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "lista": {
+    "x": 37,
+    "y": 393.9,
+    "w": 316,
+    "h": 202
+   },
+   "enviar": {
+    "x": 37,
+    "y": 611.9,
+    "w": 316,
+    "h": 64
+   },
+   "status": {
+    "x": 37,
+    "y": 279.4,
+    "w": 316,
+    "h": 98.5
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-ordem-aberta": {
+  "arquivo": "tutorial/capturas/telao-ordem-aberta.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "grade": {
+    "x": 48,
+    "y": 441.8,
+    "w": 1600.8,
+    "h": 457
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-ordem-resultado": {
+  "arquivo": "tutorial/capturas/telao-ordem-resultado.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "resultado": {
+    "x": 48,
+    "y": 595.7,
+    "w": 1600.8,
+    "h": 168.9
+   },
+   "rodape": {
+    "x": 48,
+    "y": 786.2,
+    "w": 1600.8,
+    "h": 229
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-modo-eliminacao": {
+  "arquivo": "tutorial/capturas/painel-modo-eliminacao.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "modo": {
+    "x": 135,
+    "y": 205.8,
+    "w": 677.2,
+    "h": 45
+   },
+   "form": {
+    "x": 135,
+    "y": 119.8,
+    "w": 677.2,
+    "h": 259.3
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-eliminacao": {
+  "arquivo": "tutorial/capturas/celular-eliminacao.png",
+  "aparelho": "celular",
+  "caminho": "/votar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "opcoes": {
+    "x": 37,
+    "y": 283.4,
+    "w": 316,
+    "h": 324
+   },
+   "titulo": {
+    "x": 37,
+    "y": 191.8,
+    "w": 316,
+    "h": 71.7
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-eliminacao-r1": {
+  "arquivo": "tutorial/capturas/telao-eliminacao-r1.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "resultado": {
+    "x": 48,
+    "y": 425.5,
+    "w": 1600.8,
+    "h": 121.4
+   },
+   "barras": {
+    "x": 48,
+    "y": 815.9,
+    "w": 1260.3,
+    "h": 200.2
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-eliminacao-proxima": {
+  "arquivo": "tutorial/capturas/painel-eliminacao-proxima.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "proxima": {
+    "x": 135,
+    "y": 119.9,
+    "w": 677.2,
+    "h": 588.9
+   },
+   "abrir": {
+    "x": 135,
+    "y": 442,
+    "w": 470.7,
+    "h": 58
+   },
+   "sugeridos": {
+    "x": 135,
+    "y": 210,
+    "w": 677.2,
+    "h": 112
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-eliminacao-r2": {
+  "arquivo": "tutorial/capturas/telao-eliminacao-r2.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "grade": {
+    "x": 48,
+    "y": 374.3,
+    "w": 1600.8,
+    "h": 453
+   },
+   "topo": {
+    "x": 48,
+    "y": 27,
+    "w": 1600.8,
+    "h": 314.3
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-eliminacao-eleito": {
+  "arquivo": "tutorial/capturas/telao-eliminacao-eleito.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "resultado": {
+    "x": 48,
+    "y": 687.3,
+    "w": 1600.8,
+    "h": 169.9
+   },
+   "barras": {
+    "x": 48,
+    "y": 878.9,
+    "w": 1144.2,
+    "h": 136.9
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-comissao": {
+  "arquivo": "tutorial/capturas/painel-comissao.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "otavio": {
+    "x": 135,
+    "y": 420.2,
+    "w": 242.5,
+    "h": 44
+   },
+   "grupo": {
+    "x": 135,
+    "y": 43.7,
+    "w": 677.2,
+    "h": 528.9
+   },
+   "rodada": {
+    "x": 156.6,
+    "y": 584.6,
+    "w": 655.6,
+    "h": 25.2
+   }
+  },
+  "fundo": "rgb(244, 245, 247)",
+  "dialogo": "Registrar que a comissão escolheu Otávio, mesmo sem maioria?"
+ },
+ "telao-comissao": {
+  "arquivo": "tutorial/capturas/telao-comissao.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "resultado": {
+    "x": 48,
+    "y": 531.1,
+    "w": 1600.8,
+    "h": 275.5
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-modo-multipla": {
+  "arquivo": "tutorial/capturas/painel-modo-multipla.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "modo": {
+    "x": 135,
+    "y": 205.8,
+    "w": 677.2,
+    "h": 45
+   },
+   "max": {
+    "x": 135,
+    "y": 289.9,
+    "w": 110,
+    "h": 47.2
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-multipla": {
+  "arquivo": "tutorial/capturas/celular-multipla.png",
+  "aparelho": "celular",
+  "caminho": "/votar",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "confirmar": {
+    "x": 37,
+    "y": 597.3,
+    "w": 316,
+    "h": 64
+   },
+   "abster": {
+    "x": 37,
+    "y": 677.3,
+    "w": 316,
+    "h": 52
+   },
+   "cartao": {
+    "x": 16,
+    "y": 39.8,
+    "w": 358,
+    "h": 710.5
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-multipla-aberta": {
+  "arquivo": "tutorial/capturas/telao-multipla-aberta.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "grade": {
+    "x": 48,
+    "y": 491.1,
+    "w": 1600.8,
+    "h": 421.3
+   },
+   "topo": {
+    "x": 48,
+    "y": 27,
+    "w": 1600.8,
+    "h": 434.6
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "telao-multipla-resultado": {
+  "arquivo": "tutorial/capturas/telao-multipla-resultado.png",
+  "aparelho": "telao",
+  "caminho": "/telao",
+  "largura": 1920,
+  "altura": 1080,
+  "dpr": 2,
+  "alvos": {
+   "resultado": {
+    "x": 48,
+    "y": 498.4,
+    "w": 1600.8,
+    "h": 120.5
+   },
+   "rodape": {
+    "x": 48,
+    "y": 634,
+    "w": 1600.8,
+    "h": 382.1
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-multipla-registro": {
+  "arquivo": "tutorial/capturas/painel-multipla-registro.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "caixa": {
+    "x": 135,
+    "y": 120,
+    "w": 677.2,
+    "h": 597.3
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-barra-lideres": {
+  "arquivo": "tutorial/capturas/painel-barra-lideres.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "lideres": {
+    "x": 815.1,
+    "y": 92,
+    "w": 138.1,
+    "h": 36
+   },
+   "feedback": {
+    "x": 961.2,
+    "y": 92,
+    "w": 93.9,
+    "h": 36
+   },
+   "barra": {
+    "x": 100,
+    "y": 84,
+    "w": 1240,
+    "h": 53
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "lideres-topo": {
+  "arquivo": "tutorial/capturas/lideres-topo.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "lista": {
+    "x": 253,
+    "y": 101,
+    "w": 246.2,
+    "h": 44
+   },
+   "cargos": {
+    "x": 253,
+    "y": 165,
+    "w": 934,
+    "h": 735
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "lideres-musica": {
+  "arquivo": "tutorial/capturas/lideres-musica.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "linha": {
+    "x": 270,
+    "y": 260.1,
+    "w": 900,
+    "h": 66
+   },
+   "aceitou": {
+    "x": 960.9,
+    "y": 271.1,
+    "w": 90.6,
+    "h": 44
+   },
+   "recusou": {
+    "x": 1057.5,
+    "y": 271.1,
+    "w": 99.5,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "lideres-aceitou": {
+  "arquivo": "tutorial/capturas/lideres-aceitou.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "linha": {
+    "x": 270,
+    "y": 260.1,
+    "w": 900,
+    "h": 66
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "lideres-rute": {
+  "arquivo": "tutorial/capturas/lideres-rute.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "linha": {
+    "x": 270,
+    "y": 259.8,
+    "w": 900,
+    "h": 66
+   },
+   "recusou": {
+    "x": 1057.5,
+    "y": 270.8,
+    "w": 99.5,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)",
+  "dialogo": "Marcar que Rute recusou? A vaga volta para a lista de pautas do painel, para a comissão votar de novo."
+ },
+ "lideres-recusou": {
+  "arquivo": "tutorial/capturas/lideres-recusou.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "linha": {
+    "x": 270,
+    "y": 259.8,
+    "w": 900,
+    "h": 66
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "lideres-a-definir-vazio": {
+  "arquivo": "tutorial/capturas/lideres-a-definir-vazio.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "campo": {
+    "x": 283,
+    "y": 300.1,
+    "w": 786.8,
+    "h": 47.2
+   },
+   "salvar": {
+    "x": 1077.8,
+    "y": 301.7,
+    "w": 79.3,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "lideres-a-definir": {
+  "arquivo": "tutorial/capturas/lideres-a-definir.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "campo": {
+    "x": 283,
+    "y": 300.1,
+    "w": 786.8,
+    "h": 47.2
+   },
+   "salvar": {
+    "x": 1077.8,
+    "y": 301.7,
+    "w": 79.3,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "lideres-definido": {
+  "arquivo": "tutorial/capturas/lideres-definido.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "linha": {
+    "x": 270,
+    "y": 353.1,
+    "w": 900,
+    "h": 66
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "lideres-anciao-vagas-vazio": {
+  "arquivo": "tutorial/capturas/lideres-anciao-vagas-vazio.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "vagas": {
+    "x": 1018.8,
+    "y": 182,
+    "w": 64,
+    "h": 47.2
+   },
+   "salvar": {
+    "x": 1090.8,
+    "y": 183.6,
+    "w": 79.3,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "lideres-anciao-vagas": {
+  "arquivo": "tutorial/capturas/lideres-anciao-vagas.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "vagas": {
+    "x": 1018.8,
+    "y": 182,
+    "w": 64,
+    "h": 47.2
+   },
+   "salvar": {
+    "x": 1090.8,
+    "y": 183.6,
+    "w": 79.3,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "lideres-anciao": {
+  "arquivo": "tutorial/capturas/lideres-anciao.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "cargos": {
+    "x": 253,
+    "y": 165,
+    "w": 934,
+    "h": 735
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "lideres-editar": {
+  "arquivo": "tutorial/capturas/lideres-editar.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "editar": {
+    "x": 253,
+    "y": 199.5,
+    "w": 934,
+    "h": 700.5
+   },
+   "tirar": {
+    "x": 1107.1,
+    "y": 263.7,
+    "w": 66.9,
+    "h": 44
+   },
+   "tirarPossibilidades": {
+    "x": 1107.1,
+    "y": 707.7,
+    "w": 66.9,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)",
+  "dialogo": "Tirar \"Ministério Adventista das Possibilidades\" da lista de cargos? Quem já foi eleito para ele continua, como cargo fora da lista. Ele sai também do formulário de feedback."
+ },
+ "lideres-acrescentar": {
+  "arquivo": "tutorial/capturas/lideres-acrescentar.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "acrescentar": {
+    "x": 253,
+    "y": 692.5,
+    "w": 934,
+    "h": 130.4
+   },
+   "campo": {
+    "x": 253,
+    "y": 721.7,
+    "w": 934,
+    "h": 47.2
+   },
+   "botao": {
+    "x": 253,
+    "y": 778.9,
+    "w": 126.8,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "lideres-acrescentar-digitado": {
+  "arquivo": "tutorial/capturas/lideres-acrescentar-digitado.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "acrescentar": {
+    "x": 253,
+    "y": 692.5,
+    "w": 934,
+    "h": 130.4
+   },
+   "campo": {
+    "x": 253,
+    "y": 721.7,
+    "w": 934,
+    "h": 47.2
+   },
+   "botao": {
+    "x": 253,
+    "y": 778.9,
+    "w": 126.8,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "lideres-botao-lista": {
+  "arquivo": "tutorial/capturas/lideres-botao-lista.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "lista": {
+    "x": 253,
+    "y": 101,
+    "w": 246.2,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "folha-lista-igreja": {
+  "arquivo": "tutorial/capturas/folha-lista-igreja.png",
+  "aparelho": "folha",
+  "largura": 794,
+  "altura": 1103,
+  "dpr": 2,
+  "alvos": {
+   "titulo": {
+    "x": 28,
+    "y": 81,
+    "w": 738,
+    "h": 34
+   },
+   "tabela": {
+    "x": 28,
+    "y": 143,
+    "w": 738,
+    "h": 921
+   },
+   "trecho": {
+    "x": 29,
+    "y": 258,
+    "w": 737,
+    "h": 374
+   },
+   "saude": {
+    "x": 29,
+    "y": 575,
+    "w": 737,
+    "h": 29
+   }
+  }
+ },
+ "painel-pauta-vaga": {
+  "arquivo": "tutorial/capturas/painel-pauta-vaga.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "vaga": {
+    "x": 864.2,
+    "y": 419.8,
+    "w": 442.8,
+    "h": 124.4
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "painel-depois": {
+  "arquivo": "tutorial/capturas/painel-depois.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "gerar": {
+    "x": 150,
+    "y": 691.1,
+    "w": 155.1,
+    "h": 44
+   },
+   "nominais": {
+    "x": 313.1,
+    "y": 691.1,
+    "w": 260.3,
+    "h": 44
+   },
+   "planilha": {
+    "x": 581.4,
+    "y": 691.1,
+    "w": 144.3,
+    "h": 44
+   },
+   "apagar": {
+    "x": 733.7,
+    "y": 691.1,
+    "w": 219.3,
+    "h": 44
+   },
+   "nominaisPlanilha": {
+    "x": 313.1,
+    "y": 691.1,
+    "w": 412.6,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)",
+  "dialogoApagar": "Apagar TODAS as pautas e os votos delas? Gere a ata antes, se ainda não gerou. Não dá para desfazer."
+ },
+ "folha-ata": {
+  "arquivo": "tutorial/capturas/folha-ata.png",
+  "aparelho": "folha",
+  "largura": 794,
+  "altura": 4819,
+  "dpr": 2,
+  "alvos": {
+   "titulo": {
+    "x": 28,
+    "y": 81,
+    "w": 738,
+    "h": 34
+   },
+   "resumo": {
+    "x": 28,
+    "y": 181,
+    "w": 738,
+    "h": 231
+   },
+   "aberta": {
+    "x": 28,
+    "y": 431,
+    "w": 738,
+    "h": 624
+   },
+   "secreta": {
+    "x": 28,
+    "y": 1697,
+    "w": 738,
+    "h": 195
+   },
+   "secretaTabela": {
+    "x": 213,
+    "y": 1747,
+    "w": 369,
+    "h": 145
+   },
+   "contraste": {
+    "x": 28,
+    "y": 1073,
+    "w": 738,
+    "h": 818
+   }
+  }
+ },
+ "folha-votos-nominais": {
+  "arquivo": "tutorial/capturas/folha-votos-nominais.png",
+  "aparelho": "folha",
+  "largura": 794,
+  "altura": 1739,
+  "dpr": 2,
+  "alvos": {
+   "capa": {
+    "x": 28,
+    "y": 20,
+    "w": 738,
+    "h": 1119
+   },
+   "restrito": {
+    "x": 28,
+    "y": 1262,
+    "w": 738,
+    "h": 14
+   }
+  }
+ },
+ "painel-apagado": {
+  "arquivo": "tutorial/capturas/painel-apagado.png",
+  "aparelho": "painel",
+  "caminho": "/painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "barra": {
+    "x": 100,
+    "y": 84,
+    "w": 1240,
+    "h": 53
+   },
+   "feedback": {
+    "x": 961.2,
+    "y": 92,
+    "w": 93.9,
+    "h": 36
+   },
+   "lideres": {
+    "x": 815.1,
+    "y": 92,
+    "w": 138.1,
+    "h": 36
+   },
+   "pautas": {
+    "x": 847.2,
+    "y": 157,
+    "w": 476.8,
+    "h": 464.5
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "lideres-final": {
+  "arquivo": "tutorial/capturas/lideres-final.png",
+  "aparelho": "painel",
+  "caminho": "/lideres",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "saude": {
+    "x": 253,
+    "y": 260.3,
+    "w": 934,
+    "h": 136
+   },
+   "musica": {
+    "x": 253,
+    "y": 416.3,
+    "w": 934,
+    "h": 136
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "feedback-qr": {
+  "arquivo": "tutorial/capturas/feedback-qr.png",
+  "aparelho": "painel",
+  "caminho": "/feedback-painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "qr": {
+    "x": 253,
+    "y": 291.2,
+    "w": 220,
+    "h": 220
+   },
+   "baixar": {
+    "x": 375.8,
+    "y": 523.2,
+    "w": 202.6,
+    "h": 44
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "celular-feedback": {
+  "arquivo": "tutorial/capturas/celular-feedback.png",
+  "aparelho": "celular",
+  "caminho": "/feedback",
+  "largura": 390,
+  "altura": 790,
+  "dpr": 2,
+  "alvos": {
+   "cargo": {
+    "x": 37,
+    "y": 193.1,
+    "w": 316,
+    "h": 42
+   },
+   "texto": {
+    "x": 37,
+    "y": 293.9,
+    "w": 316,
+    "h": 178.7
+   },
+   "enviar": {
+    "x": 37,
+    "y": 644.6,
+    "w": 316,
+    "h": 40.4
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "feedback-lista": {
+  "arquivo": "tutorial/capturas/feedback-lista.png",
+  "aparelho": "painel",
+  "caminho": "/feedback-painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "abas": {
+    "x": 253,
+    "y": 101,
+    "w": 934,
+    "h": 45
+   },
+   "lido": {
+    "x": 266,
+    "y": 223.4,
+    "w": 169.1,
+    "h": 44
+   },
+   "lista": {
+    "x": 253,
+    "y": 146,
+    "w": 934,
+    "h": 413.1
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ },
+ "feedback-lido": {
+  "arquivo": "tutorial/capturas/feedback-lido.png",
+  "aparelho": "painel",
+  "caminho": "/feedback-painel",
+  "largura": 1440,
+  "altura": 900,
+  "dpr": 2,
+  "alvos": {
+   "abas": {
+    "x": 253,
+    "y": 101,
+    "w": 934,
+    "h": 45
+   },
+   "lidos": {
+    "x": 369.4,
+    "y": 101.5,
+    "w": 98.6,
+    "h": 44
+   },
+   "lista": {
+    "x": 253,
+    "y": 146,
+    "w": 934,
+    "h": 272.8
+   }
+  },
+  "fundo": "rgb(244, 245, 247)"
+ }
+}

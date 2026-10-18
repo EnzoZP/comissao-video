@@ -3,15 +3,29 @@
 // direitos). Determinístico: a mesma execução gera sempre o mesmo arquivo.
 //
 // Uso: node scripts/gerar-trilha.mjs  (gera antes de renderizar a composição ComissaoMusica)
+//      node scripts/gerar-trilha.mjs --segundos 164.9 --saida public/tutorial/trilha-1.wav
+//        (tutorial: duração dada e arpejo discreto e constante, por baixo da narração)
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { dirname, join } from "node:path";
+import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), "..");
 
+const argumento = (nome) => {
+  const i = process.argv.indexOf(nome);
+  return i > 0 ? process.argv[i + 1] : undefined;
+};
+const SEGUNDOS = argumento("--segundos");
+const SAIDA = argumento("--saida");
+if ((SEGUNDOS === undefined) !== (SAIDA === undefined) || (SEGUNDOS && !(Number(SEGUNDOS) > 10))) {
+  console.error("Use --segundos e --saida juntos, com mais de 10 segundos.");
+  process.exit(1);
+}
+const TUTORIAL = SEGUNDOS !== undefined;
+
 // Duração e início de cada cena vêm do roteiro.ts, a mesma fonte do vídeo: mudou uma
 // cena, a trilha acompanha ao ser gerada de novo.
-const roteiro = readFileSync(join(RAIZ, "src", "roteiro.ts"), "utf8");
+const roteiro = TUTORIAL ? "" : readFileSync(join(RAIZ, "src", "roteiro.ts"), "utf8");
 const cenas = [
   ...roteiro.matchAll(/id:\s*"([^"]+)",[^}]*?segundos:\s*([\d.]+)/g),
 ].map((m) => ({ id: m[1], segundos: Number(m[2]) }));
@@ -22,7 +36,7 @@ for (const c of cenas) {
   acumulado += c.segundos;
 }
 const USADAS = ["C03-QR", "C07-Cascata", "C09-Empate", "C10-Ata"];
-if (cenas.length === 0 || USADAS.some((id) => inicioDe[id] === undefined)) {
+if (!TUTORIAL && (cenas.length === 0 || USADAS.some((id) => inicioDe[id] === undefined))) {
   console.error(
     `roteiro.ts não foi lido: ${cenas.length} cenas encontradas; faltam ${USADAS.filter((id) => inicioDe[id] === undefined).join(", ")}`,
   );
@@ -30,7 +44,7 @@ if (cenas.length === 0 || USADAS.some((id) => inicioDe[id] === undefined)) {
 }
 
 const TAXA = 44100;
-const DURACAO = acumulado;
+const DURACAO = TUTORIAL ? Number(SEGUNDOS) : acumulado;
 const N = Math.round(TAXA * DURACAO);
 
 // 72 BPM, dois compassos por acorde: Dó – Sol – Lá menor – Fá, em volta.
@@ -55,6 +69,8 @@ const CRESCE = inicioDe["C07-Cascata"];
 const VOLTA = inicioDe["C09-Empate"];
 const SAI = inicioDe["C10-Ata"];
 const arpejoEm = (t) => {
+  // tutorial: entra devagar e fica discreto e constante; sai antes do fim
+  if (TUTORIAL) return 0.3 * suave((t - 3) / 6) * (1 - suave((t - (DURACAO - 9)) / 5));
   if (t < ENTRA) return 0;
   if (t < CRESCE) return 0.45 * suave((t - ENTRA) / 4);
   if (t < VOLTA) return 0.45 + 0.55 * suave((t - CRESCE) / 3);
@@ -195,9 +211,9 @@ cab.writeUInt16LE(16, 34);
 cab.write("data", 36);
 cab.writeUInt32LE(dados.length, 40);
 
-const destino = join(RAIZ, "public", "trilha.wav");
+const destino = TUTORIAL ? resolve(RAIZ, SAIDA) : join(RAIZ, "public", "trilha.wav");
 mkdirSync(dirname(destino), { recursive: true });
 writeFileSync(destino, Buffer.concat([cab, dados]));
 console.log(
-  `trilha gerada: ${destino} (${cenas.length} cenas, ${DURACAO} s; pico bruto ${pico.toFixed(3)} normalizado para -1 dBFS)`,
+  `trilha gerada: ${destino} (${TUTORIAL ? "tutorial" : `${cenas.length} cenas`}, ${DURACAO} s; pico bruto ${pico.toFixed(3)} normalizado para -1 dBFS)`,
 );

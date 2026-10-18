@@ -13,3 +13,8 @@ skills-lock.json
 
 # Trilha gerada por scripts/gerar-trilha.mjs (15 MB; regenerável)
 public/trilha.wav
+# Trilhas do tutorial, uma por vídeo (26 a 35 MB cada; regeneráveis com --segundos e --saida)
+public/tutorial/trilha-*.wav
+
+# Conexão com o branch de teste do Neon usado pelas capturas do tutorial (tem senha)
+.env*

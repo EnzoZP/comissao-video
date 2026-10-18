@@ -13,7 +13,10 @@ export const Cursor: React.FC<{
   aparece: number;
   some?: number;
   tamanho?: number;
-}> = ({ pontos, cliques, aparece, some = 1e6, tamanho = 26 }) => {
+  // contraste: pulso laranja com miolo claro, visível sobre botão azul e sobre fundo branco
+  // (o tutorial usa; o vídeo antigo fica como estava)
+  contraste?: boolean;
+}> = ({ pontos, cliques, aparece, some = 1e6, tamanho = 26, contraste = false }) => {
   const frame = useCurrentFrame();
   const entrada = janela(frame, aparece, aparece + 8);
   const saida = janela(frame, some, some + 8, theme.ease.in);
@@ -29,6 +32,9 @@ export const Cursor: React.FC<{
           easing: theme.ease.out,
         });
   const onda = clique === undefined ? 0 : janela(frame, clique, clique + 16);
+  // no contraste, o pulso acompanha o tamanho do cursor: num aparelho pequeno na tela (o telão
+  // ao lado do painel) ele continua do mesmo tamanho em px de vídeo
+  const p = contraste ? tamanho / 26 : 1;
   return (
     <div
       style={{
@@ -44,13 +50,14 @@ export const Cursor: React.FC<{
         <div
           style={{
             position: "absolute",
-            left: -mapa(onda, 8, 34),
-            top: -mapa(onda, 8, 34),
-            width: mapa(onda, 16, 68),
-            height: mapa(onda, 16, 68),
+            left: -p * mapa(onda, contraste ? 12 : 8, contraste ? 44 : 34),
+            top: -p * mapa(onda, contraste ? 12 : 8, contraste ? 44 : 34),
+            width: p * mapa(onda, contraste ? 24 : 16, contraste ? 88 : 68),
+            height: p * mapa(onda, contraste ? 24 : 16, contraste ? 88 : 68),
             borderRadius: "50%",
-            border: `3px solid ${theme.cores.destaque}`,
-            opacity: 1 - onda,
+            border: contraste ? `${5 * p}px solid ${theme.cores.anel}` : `3px solid ${theme.cores.destaque}`,
+            background: contraste ? theme.efeitos.toqueClaro : undefined,
+            opacity: contraste ? 1 - onda * onda : 1 - onda,
           }}
         />
       )}
@@ -81,11 +88,14 @@ export const Cursor: React.FC<{
 };
 
 // ---------- Toque de dedo na tela do celular ----------
-export const Toque: React.FC<{ x: number; y: number; quadro: number }> = ({
-  x,
-  y,
-  quadro,
-}) => {
+// contraste: miolo claro com contorno escuro, visível também sobre botão azul ou escuro
+// (o tutorial usa; o vídeo antigo fica como estava).
+export const Toque: React.FC<{
+  x: number;
+  y: number;
+  quadro: number;
+  contraste?: boolean;
+}> = ({ x, y, quadro, contraste = false }) => {
   const frame = useCurrentFrame();
   if (frame < quadro - 10 || frame > quadro + 22) return null;
   const chega = janela(frame, quadro - 10, quadro - 2);
@@ -120,7 +130,7 @@ export const Toque: React.FC<{ x: number; y: number; quadro: number }> = ({
             width: mapa(onda, 44, 128),
             height: mapa(onda, 44, 128),
             borderRadius: "50%",
-            border: `3px solid ${theme.efeitos.toqueAnel}`,
+            border: `3px solid ${contraste ? theme.cores.texto : theme.efeitos.toqueAnel}`,
             opacity: 1 - onda,
           }}
         />
@@ -133,8 +143,10 @@ export const Toque: React.FC<{ x: number; y: number; quadro: number }> = ({
           width: 44,
           height: 44,
           borderRadius: "50%",
-          background: theme.efeitos.toque,
-          border: `2px solid ${theme.efeitos.toqueAnel}`,
+          background: contraste ? theme.efeitos.toqueClaro : theme.efeitos.toque,
+          border: contraste
+            ? `3px solid ${theme.cores.texto}`
+            : `2px solid ${theme.efeitos.toqueAnel}`,
           opacity: chega * (1 - vai),
           transform: `scale(${mapa(chega, 1.4, 1) * aperto})`,
         }}
