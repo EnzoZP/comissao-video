@@ -10,6 +10,11 @@
 // protegeria um áudio gerado num bloco só por vídeo, cuja defasagem se acumula de cena em
 // cena: o que resolve é o áudio ter a duração do vídeo.
 //
+// Com a narração gravada (campo voz da cena, medido do áudio por scripts/tutorial/medir-voz.mjs
+// e posto na cena pelo Root.tsx), a régua passa a ser a própria voz: a cena dura o áudio mais o
+// respiro, e a palavra n cai no quadro interpolado entre os começos de frase medidos. Sem voz
+// (o roteiro, o Node), vale a régua de 2,5 palavras/s.
+//
 // Este arquivo é importado também por scripts/tutorial/gerar-roteiro.mjs (Node, sem bundler):
 // nada de import de valor, só sintaxe que o Node apaga.
 
@@ -83,12 +88,17 @@ export type Cartao = {
   itens?: { em: string; icone: "computador" | "telao" | "celular"; texto: string }[];
 };
 
+// Narração gravada da cena, medida do áudio: duração em quadros e, para cada começo de frase,
+// [índice da primeira palavra, quadro em que ela começa], do começo ao fim da fala.
+export type VozDaCena = { texto: string; quadros: number; frases: [number, number][] };
+
 export type CenaTutorial = {
   id: string; // id da composição avulsa (sem acento nem espaço)
   nome: string; // nome da Sequence e da cena no roteiro-narracao.md
   fala: string;
   cartao?: Cartao;
   planos: Plano[];
+  voz?: VozDaCena;
 };
 
 export type VideoTutorial = {
@@ -108,11 +118,23 @@ export const textoFalado = (fala: string) =>
 export const contarPalavras = (texto: string) =>
   (texto.match(PALAVRA) ?? []).length;
 
-export const quadrosDaCena = (cena: { fala: string }) =>
-  contarPalavras(textoFalado(cena.fala)) * QUADROS_POR_PALAVRA + RESPIRO;
+export const quadrosDaCena = (cena: { fala: string; voz?: VozDaCena }) =>
+  (cena.voz ? cena.voz.quadros : contarPalavras(textoFalado(cena.fala)) * QUADROS_POR_PALAVRA) +
+  RESPIRO;
 
-export const segundosDaCena = (cena: { fala: string }) =>
+export const segundosDaCena = (cena: { fala: string; voz?: VozDaCena }) =>
   quadrosDaCena(cena) / FPS;
+
+// Quadro em que a palavra n (contada do começo da fala) começa a ser dita.
+export const quadroDaPalavra = (cena: { voz?: VozDaCena }, n: number) => {
+  const frases = cena.voz?.frases;
+  if (!frases) return n * QUADROS_POR_PALAVRA;
+  const depois = frases.findIndex(([palavra]) => palavra > n);
+  if (depois <= 0) return frases[depois < 0 ? frases.length - 1 : 0][1];
+  const [p0, q0] = frases[depois - 1];
+  const [p1, q1] = frases[depois];
+  return Math.round(q0 + ((q1 - q0) * (n - p0)) / (p1 - p0));
+};
 
 export const marcasDa = (fala: string) => {
   const marcas: string[] = [];
@@ -147,8 +169,8 @@ export const palavrasAteAcao = (cena: { fala: string }, marca: string) => {
 };
 
 // Quadro em que o visual da marca tem de estar completo.
-export const quadroDaMarca = (cena: { id: string; fala: string }, marca: string) =>
-  Math.max(0, palavrasAntes(cena, marca) * QUADROS_POR_PALAVRA - FOLGA);
+export const quadroDaMarca = (cena: { id: string; fala: string; voz?: VozDaCena }, marca: string) =>
+  marca === "inicio" ? 0 : Math.max(0, quadroDaPalavra(cena, palavrasAntes(cena, marca)) - FOLGA);
 
 export const quadrosDoVideo = (video: VideoTutorial) =>
   video.cenas.reduce((soma, cena) => soma + quadrosDaCena(cena), 0);
@@ -177,11 +199,13 @@ export const linhaDoTempo = (cena: CenaTutorial): PlanoT[] => {
     }
     if ((p.cursor && p.clique) || p.toque) {
       const proximo = i + 1 < planos.length ? planos[i + 1].T - TRANSICAO_LAYOUT : fim;
-      // depois de a frase dizer "clique" (a frase começa em T + 6, 12 quadros por palavra);
+      // depois de a frase dizer "clique" (o quadro em que a palavra começa, pela régua da cena);
       // com diálogo, cedo o bastante para ele ficar uns 2 s na tela; sempre antes do próximo plano
       // (com diálogo, o clique cai na própria palavra, para a confirmação ter mais tempo)
       const depoisDoVerbo =
-        p.T + FOLGA + QUADROS_POR_PALAVRA * palavrasAteAcao(cena, p.em) + (p.dialogo ? 4 : 10);
+        (cena.voz
+          ? quadroDaPalavra(cena, palavrasAntes(cena, p.em) + palavrasAteAcao(cena, p.em))
+          : p.T + FOLGA + QUADROS_POR_PALAVRA * palavrasAteAcao(cena, p.em)) + (p.dialogo ? 4 : 10);
       const acao = Math.max(depoisDoVerbo, proximo - (p.dialogo ? 84 : 16));
       p.acao = Math.max(p.T + 8, Math.min(acao, proximo - 12));
     }

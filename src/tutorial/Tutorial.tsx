@@ -33,6 +33,8 @@ import {
 // Volume da trilha por baixo da narração: com 0,11 ela mede cerca de −30 LUFS (loudnorm sobre
 // trilha-N.wav), uns 14 dB abaixo de uma voz em −16 LUFS.
 export const VOLUME_TRILHA = 0.11;
+// Volume da narração (public/tutorial/voz/<id da cena>.wav).
+export const VOLUME_VOZ = 1;
 
 const ICONES = {
   computador: IconeComputador,
@@ -156,6 +158,10 @@ export const CenaDoTutorial: React.FC<{ cena: CenaTutorial; ultima?: boolean }> 
   return (
     <AbsoluteFill style={{ opacity: 1 - sai * 0.9 }}>
       {cena.cartao ? <CartaoCena cena={cena} /> : <Palco cena={cena} />}
+      {/* a narração fica na cena, para tocar também na composição avulsa do Studio */}
+      {cena.voz ? (
+        <Html5Audio src={staticFile(`tutorial/voz/${cena.id}.wav`)} volume={VOLUME_VOZ} />
+      ) : null}
     </AbsoluteFill>
   );
 };
