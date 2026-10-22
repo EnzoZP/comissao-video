@@ -1,6 +1,6 @@
 // Capturas reais do app para o tutorial da secretária.
 //
-// O app de verdade (../comissao) roda DENTRO deste processo: as páginas abrem no endereço de
+// O app de verdade (a pasta acima desta) roda DENTRO deste processo: as páginas abrem no endereço de
 // produção, para o QR e os textos mostrarem o endereço certo, mas todo pedido é atendido aqui
 // (route.fulfill). Os handlers de api/ são chamados direto, contra o branch de teste do Neon
 // cujo endereço está em .env.tutorial (fora do git). Nada sai para a produção:
@@ -22,7 +22,7 @@ import { pathToFileURL } from 'node:url';
 import { randomBytes } from 'node:crypto';
 
 const RAIZ = path.resolve(import.meta.dirname, '../..');
-const APP = path.resolve(RAIZ, '../comissao');
+const APP = path.resolve(RAIZ, '..');
 const PUBLICO = path.join(APP, 'public');
 const ORIGEM = 'https://comissao-votacao.vercel.app';
 const HOST_INTERNO = 'http://tutorial.invalid';
