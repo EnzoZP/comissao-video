@@ -1,0 +1,152 @@
+/* PDFs do app (divulgação e tutorial): páginas 16:9 de 1280 × 720 px, impressas pelo Chrome.
+   Cores: o denim da marca (#2F557F, o theme-color do app) é a estrutura; o laranja do anel do
+   vídeo (#ea580c, src/theme.ts) só marca o que se clica. Fonte: Inter, a mesma do vídeo. */
+
+@page { size: 1280px 720px; margin: 0; }
+
+:root {
+  --denim: #2f557f;
+  --denim-escuro: #1d3653;
+  --denim-claro: #e8eef5;
+  --laranja: #ea580c;
+  --tinta: #16181d;
+  --suave: #5a6170;
+  --fundo: #f4f5f7;
+  --papel: #ffffff;
+  --borda: #d5d9e0;
+  --noite: #0b0d11;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { background: #888; }
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--tinta);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  font-feature-settings: "cv11", "ss01";
+}
+
+.pagina {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  background: var(--papel);
+  page-break-after: always;
+  break-after: page;
+}
+@media screen { .pagina { margin: 0 auto 24px; box-shadow: 0 8px 30px rgba(0, 0, 0, .25); } }
+
+/* ---------- Tipografia ---------- */
+.sobretitulo {
+  font-size: 15px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--denim);
+}
+.titulo { font-size: 44px; line-height: 1.08; font-weight: 800; letter-spacing: -.02em; }
+.titulo-grande { font-size: 64px; line-height: 1.02; font-weight: 800; letter-spacing: -.03em; }
+.subtitulo { font-size: 22px; line-height: 1.4; color: var(--suave); font-weight: 500; }
+.corpo { font-size: 18px; line-height: 1.5; color: var(--tinta); }
+.realce { color: var(--denim); }
+.laranja { color: var(--laranja); }
+strong { font-weight: 700; }
+
+/* ---------- Rodapé de página ---------- */
+.rodape {
+  position: absolute; left: 56px; right: 56px; bottom: 26px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 13px; color: var(--suave); font-weight: 500;
+}
+.rodape .marca { height: 26px; }
+.rodape .num { font-variant-numeric: tabular-nums; }
+.escura .rodape { color: #9aa6b8; }
+
+/* ---------- Telas (capturas reais) ---------- */
+/* .tela recorta a captura (img dentro de .quadro, posicionada pelo montar.mjs); anéis e números
+   ficam por cima, nas caixas medidas pela captura. */
+.tela { position: absolute; overflow: hidden; }
+.quadro { position: absolute; inset: 0; overflow: hidden; }
+.quadro img { position: absolute; transform-origin: 0 0; image-rendering: auto; }
+.anel {
+  position: absolute; border: 3px solid var(--laranja); border-radius: 10px;
+  box-shadow: 0 0 0 4px rgba(234, 88, 12, .18);
+}
+.ponto {
+  position: absolute; width: 34px; height: 34px; border-radius: 50%;
+  background: var(--laranja); color: #fff; font-weight: 800; font-size: 17px;
+  display: grid; place-items: center; box-shadow: 0 3px 10px rgba(234, 88, 12, .45);
+  border: 3px solid #fff;
+}
+
+/* Moldura de navegador */
+.navegador {
+  position: absolute; background: #fff; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 24px 60px rgba(22, 24, 29, .18), 0 2px 6px rgba(22, 24, 29, .08);
+  border: 1px solid #dfe3ea;
+}
+.navegador .barra-nav {
+  height: 34px; background: #eef1f5; display: flex; align-items: center; gap: 7px; padding: 0 14px;
+  border-bottom: 1px solid #e1e5ec;
+}
+.navegador .barra-nav i { width: 11px; height: 11px; border-radius: 50%; background: #cfd5de; }
+.navegador .url {
+  margin-left: 14px; flex: 1; height: 20px; border-radius: 10px; background: #fff;
+  font-size: 11.5px; color: var(--suave); display: flex; align-items: center; padding: 0 12px;
+}
+.navegador .tela { left: 0; right: 0; bottom: 0; top: 34px; }
+
+/* Moldura de celular */
+.celular {
+  position: absolute; background: #111; border-radius: 42px; padding: 11px;
+  box-shadow: 0 30px 60px rgba(11, 13, 17, .35), inset 0 0 0 2px #2b2f37;
+}
+.celular .tela { inset: 11px; border-radius: 32px; }
+.celular .ilha {
+  position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
+  width: 92px; height: 24px; border-radius: 12px; background: #0b0b0d; z-index: 2;
+}
+
+/* Moldura de telão (projetor) */
+.telao {
+  position: absolute; background: var(--noite); border-radius: 12px; padding: 10px;
+  box-shadow: 0 30px 70px rgba(11, 13, 17, .45), inset 0 0 0 1px #2a303b;
+}
+.telao .tela { inset: 10px; border-radius: 4px; }
+
+/* Folha impressa (ata, lista) */
+.folha {
+  position: absolute; background: #fff; box-shadow: 0 20px 50px rgba(22, 24, 29, .18);
+  border: 1px solid #e3e6ec;
+}
+.folha .tela { inset: 0; }
+
+/* ---------- Componentes de página ---------- */
+.passos { list-style: none; counter-reset: passo; display: grid; gap: 18px; }
+.passos li { display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; font-size: 18px; line-height: 1.45; }
+.passos li::before {
+  counter-increment: passo; content: counter(passo);
+  width: 34px; height: 34px; border-radius: 50%; background: var(--laranja); color: #fff;
+  font-weight: 800; font-size: 16px; display: grid; place-items: center;
+}
+.botao-app {
+  display: inline-block; padding: 1px 9px; border-radius: 7px; background: var(--denim-claro);
+  color: var(--denim-escuro); font-weight: 700; font-size: .92em;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.dica {
+  border-left: 4px solid var(--denim); background: var(--denim-claro); border-radius: 0 10px 10px 0;
+  padding: 14px 18px; font-size: 16px; line-height: 1.45; color: var(--denim-escuro);
+}
+.selo {
+  display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px;
+  background: var(--denim-claro); color: var(--denim); font-weight: 700; font-size: 14px;
+}
+
+/* Escuras (capa, divisórias) */
+.escura { background: radial-gradient(1200px 700px at 78% 30%, #1b2a40 0%, var(--noite) 62%); color: #f4f6fa; }
+.escura .subtitulo { color: #b6c0d0; }
+.escura .sobretitulo { color: #8fb2da; }
+.denim { background: linear-gradient(135deg, var(--denim) 0%, var(--denim-escuro) 100%); color: #fff; }
+.denim .subtitulo { color: #d6e2f0; }
+.denim .sobretitulo { color: #b9cde4; }
