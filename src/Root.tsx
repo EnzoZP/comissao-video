@@ -14,10 +14,7 @@ import {
   quadrosDoVideo,
   textoFalado,
 } from "./tutorial/tempo";
-import { V1 } from "./tutorial/v1-preparacao";
-import { V2 } from "./tutorial/v2-reuniao";
-import { V3 } from "./tutorial/v3-modos";
-import { V4 } from "./tutorial/v4-depois";
+import { VIDEOS as VIDEOS_TUTORIAL } from "./tutorial/videos";
 import VOZ from "./tutorial/voz.json";
 
 // Narração gravada de cada cena (scripts/tutorial/medir-voz.mjs): com ela, a cena dura o áudio e
@@ -49,9 +46,9 @@ const CENAS_AVULSAS = CENAS.map((cena) => {
   return { cena, ComFundo };
 });
 
-// Tutorial da secretária: quatro vídeos 1920 × 1080, cada um com as cenas avulsas numa
+// Tutorial: doze vídeos da secretária e um do membro, 1920 × 1080, cada um com as cenas avulsas numa
 // subpasta (a duração de cada cena sai da narração, em tempo.ts).
-const TUTORIAL = [V1, V2, V3, V4].map(comVoz).map((video) => ({
+const TUTORIAL = VIDEOS_TUTORIAL.map(comVoz).map((video) => ({
   video,
   Completo: (() => <TutorialVideo video={video} trilha />) as React.FC,
   cenas: video.cenas.map((cena) => ({

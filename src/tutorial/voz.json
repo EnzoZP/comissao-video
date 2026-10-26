@@ -1,1135 +1,1935 @@
 {
- "T1-01-Abertura": {
-  "texto": "Este vídeo mostra como preparar a reunião da comissão de nomeações no app de votação. Você vai precisar de um computador com internet, de um projetor para o telão e do celular de cada membro.",
-  "quadros": 386,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    15,
-    170
-   ],
-   [
-    35,
-    382
-   ]
-  ]
- },
- "T1-02-Conta": {
-  "texto": "Primeiro, o responsável pelo app manda para você um link de convite. Abra o link e escreva seu nome, seu e-mail e uma senha de pelo menos doze caracteres. Repita a senha no campo de baixo. Depois clique em Criar minha conta. Pronto. Você já está no painel.",
-  "quadros": 610,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    12,
-    131
-   ],
-   [
-    29,
-    325
-   ],
-   [
-    36,
-    444
-   ],
-   [
-    42,
-    531
-   ],
-   [
-    43,
-    562
-   ],
-   [
-    48,
-    610
-   ]
-  ]
- },
- "T1-03-Entrar": {
-  "texto": "Nas outras vezes, entre pelo endereço do painel, com seu e-mail e sua senha. Guarde esse endereço nos favoritos. No seu computador, marque Lembrar neste computador. Em computador emprestado, não marque, e clique em Sair quando terminar.",
-  "quadros": 582,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    14,
-    192
-   ],
-   [
-    19,
-    287
-   ],
-   [
-    26,
-    422
-   ],
-   [
-    37,
-    578
-   ]
-  ]
- },
- "T1-04-Painel": {
-  "texto": "Este é o painel da secretaria. O selo escrito Você está aqui fica no bloco do próximo passo. Na reunião, você usa o bloco chamado Agora, com a pauta em andamento. E o bloco chamado Pautas, com a lista. A barra de cima mostra o que está acontecendo e leva a cada parte.",
-  "quadros": 641,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    6,
-    76
-   ],
-   [
-    18,
-    211
-   ],
-   [
-    31,
-    380
-   ],
-   [
-    39,
-    490
-   ],
-   [
-    53,
-    637
-   ]
-  ]
- },
- "T1-05-Membros": {
-  "texto": "Comece cadastrando os membros da comissão. Escreva um nome por linha. Depois clique em Adicionar membros. Isso se faz uma vez só. Nas próximas reuniões, só confira se a lista está certa.",
-  "quadros": 463,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    6,
-    101
-   ],
-   [
-    11,
-    180
-   ],
-   [
-    16,
-    266
-   ],
-   [
-    22,
-    341
-   ],
-   [
-    32,
-    452
-   ]
-  ]
- },
- "T1-06-Telao": {
-  "texto": "As pautas ficam para o próximo vídeo. Agora, o telão. Clique em Gerar link do telão. Depois clique em Abrir o telão. O telão abre numa aba nova. Arraste a aba para fora e leve a janela para o projetor. Aperte a tecla éfe onze para ficar em tela cheia. No Mac, clique no botão verde da janela.",
-  "quadros": 716,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    7,
-    78
-   ],
-   [
-    10,
-    118
-   ],
-   [
-    16,
-    195
-   ],
-   [
-    22,
-    269
-   ],
-   [
-    28,
-    342
-   ],
-   [
-    40,
-    488
-   ],
-   [
-    50,
-    632
-   ],
-   [
-    58,
-    716
-   ]
-  ]
- },
- "T1-07-OutroComputador": {
-  "texto": "O telão fica em outro computador? Clique em Gerar código. No computador do telão, abra o endereço que aparece no painel. Depois digite os seis números e clique em Entrar. O código vale dez minutos.",
-  "quadros": 492,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    6,
-    88
-   ],
-   [
-    10,
-    152
-   ],
-   [
-    21,
-    316
-   ],
-   [
-    30,
-    431
-   ],
-   [
-    35,
-    487
-   ]
-  ]
- },
- "T1-08-Entrada": {
-  "texto": "Com todos na sala, clique em Abrir entrada pelo quê erre e confirme. O telão mostra o quê erre e um código de seis números.",
-  "quadros": 268,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    13,
-    158
-   ],
-   [
-    25,
-    264
-   ]
-  ]
- },
- "T1-09-Celular": {
-  "texto": "Cada membro aponta a câmera do celular para o quê erre e toca no link que aparece. Depois toca no próprio nome e confirma. Pronto. O celular espera a votação abrir, e o telão mostra quem já entrou.",
-  "quadros": 400,
+ "S01-01-Abertura": {
+  "texto": "Este vídeo mostra o primeiro acesso ao painel da secretaria, no app de votação da comissão de nomeações. Para a reunião, você vai precisar de um computador com internet, de um projetor para o telão e do celular de cada membro.",
+  "quadros": 444,
   "frases": [
    [
     0,
     0
    ],
    [
-    17,
-    173
-   ],
-   [
-    24,
-    255
-   ],
-   [
-    25,
-    270
-   ],
-   [
-    38,
-    396
-   ]
-  ]
- },
- "T1-10-Longe": {
-  "texto": "Quem está longe do telão pode entrar sem o quê erre. No celular, a pessoa abre o endereço que aparece no telão, junto do quê erre, digita os seis números e toca em Entrar. Depois toca no próprio nome e confirma. Pronto, a pessoa entrou.",
-  "quadros": 455,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    11,
-    98
-   ],
-   [
-    34,
-    324
+    18,
+    215
    ],
    [
     41,
-    408
-   ],
-   [
-    45,
-    451
+    439
    ]
   ]
  },
- "T1-11-NomeErrado": {
-  "texto": "Alguém tocou no nome errado? Na lista de membros, clique em Liberar ao lado do nome que foi tocado por engano, e confirme. O nome volta para a lista do quê erre. Quem errou escaneia de novo e toca no próprio nome.",
-  "quadros": 512,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    5,
-    80
-   ],
-   [
-    23,
-    305
-   ],
-   [
-    32,
-    404
-   ],
-   [
-    42,
-    509
-   ]
-  ]
- },
- "T1-12-Tema": {
-  "texto": "No alto do painel, você escolhe o tema claro ou escuro. Ele vale para todas as telas.",
-  "quadros": 182,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    11,
-    122
-   ],
-   [
-    17,
-    181
-   ]
-  ]
- },
- "T1-13-Fim": {
-  "texto": "A preparação está pronta. No próximo vídeo, você conduz a reunião, da primeira pauta ao resultado.",
-  "quadros": 188,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    4,
-    64
-   ],
-   [
-    16,
-    184
-   ]
-  ]
- },
- "T2-01-Abertura": {
-  "texto": "Este vídeo mostra como conduzir a reunião pelo painel, da primeira pauta até o resultado registrado.",
-  "quadros": 197,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    16,
-    197
-   ]
-  ]
- },
- "T2-02-Pautas": {
-  "texto": "Antes da reunião, liste as pautas no bloco Pautas, um cargo por linha. Depois clique em Adicionar pautas. Os nomes dos indicados você digita na hora, quando a pauta começar.",
-  "quadros": 442,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    13,
-    211
-   ],
-   [
-    18,
-    294
-   ],
-   [
-    30,
-    438
-   ]
-  ]
- },
- "T2-03-Comecar": {
-  "texto": "Na reunião, clique em Começar, no bloco Agora. O telão mostra o cargo, e a comissão faz as indicações.",
-  "quadros": 202,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    8,
-    100
-   ],
-   [
-    19,
-    198
-   ]
-  ]
- },
- "T2-04-Indicados": {
-  "texto": "Digite cada nome indicado e aperte a tecla Enter. Os nomes aparecem no telão durante a discussão. Para tirar um nome da lista, clique no xis ao lado dele.",
-  "quadros": 312,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    9,
-    123
-   ],
-   [
-    17,
-    218
-   ],
-   [
-    29,
-    307
-   ]
-  ]
- },
- "T2-05-ComoVotar": {
-  "texto": "Terminou a discussão? Escolha como votar. Com um nome, a votação é Sim ou Não. Com dois ou mais, cada membro escolhe um nome. O voto secreto já vem marcado. Neste exemplo, o voto é aberto, então desmarque a caixa do voto secreto. Depois clique em Colocar em votação.",
-  "quadros": 695,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    3,
-    64
-   ],
-   [
-    6,
-    121
-   ],
-   [
-    15,
-    225
-   ],
-   [
-    24,
-    344
-   ],
-   [
-    30,
-    421
-   ],
-   [
-    43,
-    625
-   ],
-   [
-    49,
-    691
-   ]
-  ]
- },
- "T2-06-Votacao": {
-  "texto": "Cada membro vota no celular. Ele pode trocar o voto até o fim da votação. No voto aberto, o telão mostra o voto de cada um.",
-  "quadros": 312,
+ "S01-02-Conta": {
+  "texto": "Primeiro, o responsável pelo app manda para você um link de convite. Abra o link e escreva seu nome, seu e-mail e uma senha de pelo menos doze caracteres. Repita a senha no campo de baixo. Depois clique em Criar minha conta. Pronto. Você já está no painel.",
+  "quadros": 567,
   "frases": [
    [
     0,
     0
    ],
    [
-    5,
-    82
+    12,
+    149
+   ],
+   [
+    29,
+    343
+   ],
+   [
+    36,
+    412
+   ],
+   [
+    42,
+    497
+   ],
+   [
+    43,
+    519
+   ],
+   [
+    48,
+    561
+   ]
+  ]
+ },
+ "S01-03-Entrar": {
+  "texto": "Nas outras vezes, entre pelo endereço do painel, com seu e-mail e sua senha. Guarde esse endereço nos favoritos. No seu computador, marque Lembrar neste computador. Em computador emprestado, não marque, e clique em Sair quando terminar.",
+  "quadros": 488,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    14,
+    153
+   ],
+   [
+    19,
+    235
+   ],
+   [
+    26,
+    348
+   ],
+   [
+    37,
+    483
+   ]
+  ]
+ },
+ "S01-04-Painel": {
+  "texto": "Este é o painel da secretaria. Na reunião, você usa o bloco Agora, com a pauta em andamento. E o bloco Pautas, com a lista. Mais abaixo ficam as gavetas da Preparação, de Depois da reunião e de Mais. A gaveta da vez abre sozinha. O selo escrito Você está aqui mostra o próximo passo. A barra de cima mostra o que está acontecendo e leva a cada parte. E o botão de interrogação, ao lado do título de cada bloco, explica o que fazer ali.",
+  "quadros": 953,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    6,
+    74
+   ],
+   [
+    18,
+    211
+   ],
+   [
+    25,
+    283
+   ],
+   [
+    39,
+    446
+   ],
+   [
+    45,
+    528
+   ],
+   [
+    55,
+    659
+   ],
+   [
+    69,
+    794
+   ],
+   [
+    86,
+    949
+   ]
+  ]
+ },
+ "S01-05-Tema": {
+  "texto": "No alto do painel, o botão do sol troca para o tema escuro, e o da lua volta ao claro. O tema vale para todas as telas, inclusive o telão e os celulares.",
+  "quadros": 324,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    20,
+    180
+   ],
+   [
+    33,
+    320
+   ]
+  ]
+ },
+ "S01-06-Ajuda": {
+  "texto": "Ficou com dúvida? Clique em Ajuda, no alto do painel. O painel desce até o contato do Enzo, pelo WhatsApp.",
+  "quadros": 233,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    3,
+    45
+   ],
+   [
+    10,
+    124
+   ],
+   [
+    20,
+    229
+   ]
+  ]
+ },
+ "S01-07-Fim": {
+  "texto": "Pronto, você já conhece o painel. No próximo vídeo, os membros da comissão.",
+  "quadros": 154,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    6,
+    72
+   ],
+   [
+    13,
+    150
+   ]
+  ]
+ },
+ "S02-01-Abertura": {
+  "texto": "Este vídeo mostra como cadastrar os membros da comissão e cuidar da lista.",
+  "quadros": 149,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    13,
+    149
+   ]
+  ]
+ },
+ "S02-02-Cadastrar": {
+  "texto": "Na gaveta da Preparação, comece cadastrando os membros da comissão. Escreva um nome por linha. Depois clique em Adicionar membros. Isso se faz uma vez só. Nas próximas reuniões, só confira se a lista está certa.",
+  "quadros": 461,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    10,
+    130
    ],
    [
     15,
     203
    ],
    [
+    20,
+    289
+   ],
+   [
     26,
-    307
+    357
+   ],
+   [
+    36,
+    458
    ]
   ]
  },
- "T2-07-Faltam": {
-  "texto": "O painel mostra quem ainda não votou. Alguém está sem celular? Clique no voto que a pessoa disser, na linha dela. O telão mostra que o voto foi registrado pela secretaria.",
-  "quadros": 420,
+ "S02-03-Links": {
+  "texto": "Depois, a lista fica recolhida. Para ver, clique em Membros, na barra de cima. Cada membro tem um link pessoal. Quem preferir pode receber o link pelo WhatsApp. Clique em Copiar link e mande para a pessoa. Se um link for parar com outra pessoa, clique em Novo link. O antigo para de funcionar.",
+  "quadros": 627,
   "frases": [
    [
     0,
-    3
+    0
+   ],
+   [
+    5,
+    77
+   ],
+   [
+    14,
+    178
+   ],
+   [
+    20,
+    247
+   ],
+   [
+    28,
+    342
+   ],
+   [
+    37,
+    440
+   ],
+   [
+    49,
+    571
+   ],
+   [
+    54,
+    623
+   ]
+  ]
+ },
+ "S02-04-Lote": {
+  "texto": "Na comissão seguinte, a lista pode mudar de uma vez. Adicionar quem aceitou cargo põe na comissão todos que aceitaram em Cargos e líderes, sem repetir quem já está. Remover todos tira todos os membros, e os links param de funcionar. Os votos antigos continuam na ata. Com a votação aberta, a lista não pode ser esvaziada.",
+  "quadros": 680,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    10,
+    115
+   ],
+   [
+    29,
+    338
+   ],
+   [
+    41,
+    486
+   ],
+   [
+    47,
+    570
+   ],
+   [
+    57,
+    673
+   ]
+  ]
+ },
+ "S02-05-Fim": {
+  "texto": "Membros cadastrados. No próximo vídeo, o telão.",
+  "quadros": 111,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    2,
+    53
+   ],
+   [
+    7,
+    107
+   ]
+  ]
+ },
+ "S03-01-Abertura": {
+  "texto": "Este vídeo mostra como abrir o telão no projetor, neste computador ou em outro.",
+  "quadros": 171,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    14,
+    165
+   ]
+  ]
+ },
+ "S03-02-Abrir": {
+  "texto": "Na barra de cima, clique em Telão e quê erre. Depois clique em Gerar link do telão. Agora clique em Abrir o telão. O telão abre numa aba nova. Arraste a aba para fora e leve a janela para o projetor. Aperte a tecla éfe onze para ficar em tela cheia. No Mac, clique no botão verde da janela. Gere um link novo a cada reunião. O da reunião anterior para de funcionar.",
+  "quadros": 807,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    10,
+    119
+   ],
+   [
+    17,
+    213
+   ],
+   [
+    23,
+    291
+   ],
+   [
+    29,
+    353
+   ],
+   [
+    41,
+    463
+   ],
+   [
+    51,
+    570
+   ],
+   [
+    59,
+    657
+   ],
+   [
+    66,
+    733
+   ],
+   [
+    73,
+    802
+   ]
+  ]
+ },
+ "S03-03-OutroComputador": {
+  "texto": "O telão fica em outro computador? Clique em Gerar código. No computador do telão, abra o endereço que aparece no painel. Depois digite os seis números e clique em Entrar. O código vale dez minutos e serve uma vez só.",
+  "quadros": 480,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    6,
+    72
+   ],
+   [
+    10,
+    136
+   ],
+   [
+    21,
+    260
+   ],
+   [
+    30,
+    367
+   ],
+   [
+    40,
+    473
+   ]
+  ]
+ },
+ "S03-04-Fim": {
+  "texto": "Telão pronto. No próximo vídeo, os membros entram pelo quê erre.",
+  "quadros": 135,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    2,
+    37
+   ],
+   [
+    11,
+    130
+   ]
+  ]
+ },
+ "S04-01-Abertura": {
+  "texto": "Este vídeo mostra como os membros entram pelo celular, com o quê erre do telão.",
+  "quadros": 154,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    15,
+    149
+   ]
+  ]
+ },
+ "S04-02-Quorum": {
+  "texto": "A reunião tem quórum? Abra a gaveta Mais, escreva o número e clique em Salvar. O quórum é opcional. Ele aparece no telão e na ata, mas não impede ninguém de votar.",
+  "quadros": 356,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    4,
+    52
+   ],
+   [
+    15,
+    178
+   ],
+   [
+    19,
+    229
+   ],
+   [
+    32,
+    350
+   ]
+  ]
+ },
+ "S04-03-Abrir": {
+  "texto": "Com todos na sala, clique em Abrir entrada pelo quê erre e confirme. O telão mostra o quê erre e um código de seis números. Com quórum, mostra também quantos faltam entrar para atingir o quórum.",
+  "quadros": 423,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    13,
+    164
+   ],
+   [
+    25,
+    283
+   ],
+   [
+    36,
+    416
+   ]
+  ]
+ },
+ "S04-04-Celular": {
+  "texto": "Cada membro aponta a câmera do celular para o quê erre e toca no link que aparece. Depois toca no próprio nome e confirma. Pronto. O celular espera a votação abrir, e o telão mostra quem já entrou.",
+  "quadros": 411,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    17,
+    170
+   ],
+   [
+    24,
+    259
+   ],
+   [
+    25,
+    285
+   ],
+   [
+    38,
+    407
+   ]
+  ]
+ },
+ "S04-05-Longe": {
+  "texto": "Quem está longe do telão pode entrar sem o quê erre. No celular, a pessoa abre o endereço que aparece no telão, junto do quê erre, digita os seis números e toca em Entrar. Depois toca no próprio nome e confirma. Pronto, a pessoa entrou.",
+  "quadros": 507,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    11,
+    108
+   ],
+   [
+    34,
+    368
+   ],
+   [
+    41,
+    456
+   ],
+   [
+    45,
+    501
+   ]
+  ]
+ },
+ "S04-06-NomeErrado": {
+  "texto": "Alguém tocou no nome errado? Na lista de membros, clique em Liberar ao lado do nome que foi tocado por engano, e confirme. O celular de quem errou fica sem acesso. O nome volta para a lista do quê erre, e cada um escaneia de novo e toca no próprio nome. Com a votação aberta, o botão Liberar aparece também na lista de quem falta votar.",
+  "quadros": 694,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    5,
+    56
+   ],
+   [
+    23,
+    254
+   ],
+   [
+    31,
+    340
+   ],
+   [
+    51,
+    528
+   ],
+   [
+    66,
+    690
+   ]
+  ]
+ },
+ "S04-07-Atrasado": {
+  "texto": "Alguém chegou atrasado? Durante a reunião, o quê erre pequeno, no canto do telão, já serve. Se precisar dele grande, clique em Mostrar o quê erre no telão, no bloco Agora. Depois clique em Voltar à votação no telão. O telão volta a mostrar a votação.",
+  "quadros": 545,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    3,
+    51
+   ],
+   [
+    16,
+    199
+   ],
+   [
+    31,
+    365
+   ],
+   [
+    39,
+    478
+   ],
+   [
+    46,
+    539
+   ]
+  ]
+ },
+ "S04-08-Fim": {
+  "texto": "Todos dentro. No próximo vídeo, você conduz uma pauta do começo ao resultado.",
+  "quadros": 171,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    2,
+    38
+   ],
+   [
+    13,
+    166
+   ]
+  ]
+ },
+ "S05-01-Abertura": {
+  "texto": "Este vídeo mostra como conduzir uma pauta pelo painel, da lista de cargos até o resultado registrado.",
+  "quadros": 212,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    17,
+    207
+   ]
+  ]
+ },
+ "S05-02-Pautas": {
+  "texto": "Antes da reunião, liste as pautas no bloco Pautas, um cargo por linha. Depois clique em Adicionar pautas. Os nomes dos indicados você digita na hora, quando a pauta começar. As pautas ficam guardadas de uma noite para outra.",
+  "quadros": 480,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    13,
+    163
+   ],
+   [
+    18,
+    247
+   ],
+   [
+    30,
+    378
+   ],
+   [
+    39,
+    474
+   ]
+  ]
+ },
+ "S05-03-Comecar": {
+  "texto": "Na reunião, clique em Começar, na linha da pauta, no bloco Pautas. A pauta vai para o bloco Agora. O telão mostra o cargo, e a comissão faz as indicações.",
+  "quadros": 356,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    12,
+    166
+   ],
+   [
+    19,
+    241
+   ],
+   [
+    30,
+    350
+   ]
+  ]
+ },
+ "S05-04-Indicados": {
+  "texto": "Digite cada nome indicado e aperte a tecla Enter. Os nomes aparecem no telão durante a discussão. Os que vieram do celular mostram quem indicou. Para tirar um nome da lista, clique no xis ao lado dele.",
+  "quadros": 423,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    9,
+    119
+   ],
+   [
+    17,
+    215
+   ],
+   [
+    25,
+    310
+   ],
+   [
+    37,
+    416
+   ]
+  ]
+ },
+ "S05-05-ComoVotar": {
+  "texto": "Terminou a discussão? Escolha como votar. Com um nome, a votação é Sim ou Não. Com dois ou mais, cada membro escolhe um nome. O voto secreto já vem marcado. Neste exemplo, o voto é aberto, então desmarque a caixa do voto secreto. Depois clique em Colocar em votação.",
+  "quadros": 608,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    3,
+    47
+   ],
+   [
+    6,
+    103
+   ],
+   [
+    15,
+    197
+   ],
+   [
+    24,
+    287
+   ],
+   [
+    30,
+    371
+   ],
+   [
+    43,
+    517
+   ],
+   [
+    49,
+    601
+   ]
+  ]
+ },
+ "S05-06-Votacao": {
+  "texto": "Cada membro vota no celular. Ele pode trocar o voto até o fim da votação. No voto aberto, o telão mostra o voto de cada um.",
+  "quadros": 262,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    5,
+    70
+   ],
+   [
+    15,
+    164
+   ],
+   [
+    26,
+    257
+   ]
+  ]
+ },
+ "S05-07-Faltam": {
+  "texto": "O painel mostra quem ainda não votou. Alguém está sem celular? Clique no voto que a pessoa disser, na linha dela. O telão mostra que o voto foi registrado pela secretaria.",
+  "quadros": 351,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    7,
+    90
+   ],
+   [
+    11,
+    142
+   ],
+   [
+    21,
+    238
+   ],
+   [
+    31,
+    345
+   ]
+  ]
+ },
+ "S05-08-Encerrar": {
+  "texto": "Quando aparecer o aviso que diz Todos votaram, clique em Encerrar votação. O resultado aparece no telão.",
+  "quadros": 231,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    12,
+    170
+   ],
+   [
+    17,
+    225
+   ]
+  ]
+ },
+ "S05-09-Registrar": {
+  "texto": "Agora registre o resultado. O painel já deixa marcado quem venceu e o cargo dele em Cargos e líderes. Confira e clique em Confirmar eleito. O nome vai para Cargos e líderes, aguardando a resposta da pessoa. Se errar, clique em Desfazer registro e confirme.",
+  "quadros": 552,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    4,
+    58
+   ],
+   [
+    19,
+    221
+   ],
+   [
+    25,
+    312
+   ],
+   [
+    37,
+    440
+   ],
+   [
+    45,
+    546
+   ]
+  ]
+ },
+ "S05-10-SimNao": {
+  "texto": "Depois, clique em Começar na próxima pauta da lista e coloque em votação, como antes. Com um nome só, cada membro vota Sim ou Não. O nome é aprovado quando recebe mais Sim do que Não.",
+  "quadros": 401,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    15,
+    196
+   ],
+   [
+    25,
+    295
+   ],
+   [
+    36,
+    396
+   ]
+  ]
+ },
+ "S05-11-Fim": {
+  "texto": "Pauta conduzida. No próximo vídeo, os membros indicam nomes pelo celular.",
+  "quadros": 156,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    2,
+    46
+   ],
+   [
+    11,
+    153
+   ]
+  ]
+ },
+ "S06-01-Abertura": {
+  "texto": "Este vídeo mostra como deixar os membros indicarem nomes pelo celular, durante a discussão da pauta.",
+  "quadros": 190,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    16,
+    185
+   ]
+  ]
+ },
+ "S06-02-Liberar": {
+  "texto": "Com a pauta em indicação, clique em Liberar indicação pelo celular. No celular, cada membro escreve um nome e toca em Indicar. Cada pessoa indica um nome por pauta. Quem indicou pode tirar a própria indicação até a votação começar.",
+  "quadros": 507,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    11,
+    149
+   ],
+   [
+    22,
+    284
+   ],
+   [
+    29,
+    376
+   ],
+   [
+    40,
+    503
+   ]
+  ]
+ },
+ "S06-03-Chegando": {
+  "texto": "O nome aparece na lista do painel, com quem indicou. No telão também. A secretaria tira qualquer nome pelo xis, como de costume. Para parar de receber nomes, clique em Fechar indicação pelo celular. Colocar em votação também fecha sozinho. A ata e a planilha registram quem indicou cada nome.",
+  "quadros": 608,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    10,
+    102
+   ],
+   [
+    13,
+    135
+   ],
+   [
+    23,
+    264
+   ],
+   [
+    34,
+    408
+   ],
+   [
+    40,
+    495
+   ],
+   [
+    50,
+    601
+   ]
+  ]
+ },
+ "S06-04-Fim": {
+  "texto": "No próximo vídeo, os membros pedem a palavra pelo celular.",
+  "quadros": 118,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    10,
+    118
+   ]
+  ]
+ },
+ "S07-01-Abertura": {
+  "texto": "Este vídeo mostra a fila de quem levantou a mão pelo celular para pedir a palavra.",
+  "quadros": 159,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    16,
+    155
+   ]
+  ]
+ },
+ "S07-02-Fila": {
+  "texto": "Fora da votação, cada membro tem no celular o botão Levantar a mão para falar. O telão mostra a fila numa faixa embaixo, na ordem em que as mãos subiram. O painel mostra a mesma fila no topo do bloco Agora. Dê a palavra ao primeiro. Quando ele terminar, clique em Já falou ao lado do nome. Ele sai da fila, e o seguinte vira o primeiro. Limpar a fila tira todos de uma vez. Colocar em votação também limpa a fila. Depois da votação, quem quiser falar levanta a mão de novo.",
+  "quadros": 997,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    15,
+    164
+   ],
+   [
+    30,
+    321
+   ],
+   [
+    41,
+    448
+   ],
+   [
+    46,
+    500
+   ],
+   [
+    57,
+    623
+   ],
+   [
+    67,
+    707
+   ],
+   [
+    75,
+    802
+   ],
+   [
+    82,
+    890
+   ],
+   [
+    93,
+    991
+   ]
+  ]
+ },
+ "S07-03-Fim": {
+  "texto": "No próximo vídeo, os imprevistos da reunião.",
+  "quadros": 101,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    7,
+    97
+   ]
+  ]
+ },
+ "S08-01-Abertura": {
+  "texto": "Este vídeo mostra o que fazer quando a reunião muda de rumo.",
+  "quadros": 125,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    12,
+    125
+   ]
+  ]
+ },
+ "S08-02-Adiar": {
+  "texto": "A pauta precisa esperar? Antes de colocar em votação, clique em Deixar para depois e confirme. Ela volta para a lista, com os nomes.",
+  "quadros": 291,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    4,
+    57
+   ],
+   [
+    16,
+    218
+   ],
+   [
+    24,
+    285
+   ]
+  ]
+ },
+ "S08-03-Corrigir": {
+  "texto": "Faltou um nome depois de abrir a votação? Clique em Corrigir indicados e confirme. Isso vale só na primeira rodada. Os votos dessa pauta são apagados, e ela volta às indicações para você acrescentar o nome. Depois coloque em votação de novo e confira o modo e o voto secreto.",
+  "quadros": 567,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    8,
+    81
+   ],
+   [
+    14,
+    182
+   ],
+   [
+    20,
+    251
+   ],
+   [
+    36,
+    429
+   ],
+   [
+    50,
+    557
+   ]
+  ]
+ },
+ "S08-04-Reabrir": {
+  "texto": "Encerrou cedo demais? Clique em Reabrir e confirme. Se o resultado já foi registrado, clique antes em Desfazer registro. A votação abre de novo, e todos votam outra vez.",
+  "quadros": 396,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    3,
+    58
+   ],
+   [
+    8,
+    136
+   ],
+   [
+    19,
+    286
+   ],
+   [
+    29,
+    391
+   ]
+  ]
+ },
+ "S08-05-Conexao": {
+  "texto": "Se aparecer o aviso que diz Sem conexão, espere. O painel tenta de novo sozinho, e os votos já registrados não se perdem.",
+  "quadros": 276,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    9,
+    119
+   ],
+   [
+    23,
+    271
+   ]
+  ]
+ },
+ "S08-06-ForaDaLista": {
+  "texto": "Surgiu uma pauta fora da lista? Com o resultado da anterior registrado, escreva o cargo no campo chamado Pauta que não estava na lista. Depois clique em Criar e começar. A pauta começa na hora, pronta para as indicações.",
+  "quadros": 473,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    6,
+    76
+   ],
+   [
+    24,
+    283
+   ],
+   [
+    30,
+    368
+   ],
+   [
+    39,
+    469
+   ]
+  ]
+ },
+ "S08-07-Fim": {
+  "texto": "No próximo vídeo, o voto secreto, a abstenção e os outros modos de votação.",
+  "quadros": 171,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    14,
+    167
+   ]
+  ]
+ },
+ "S09-01-Abertura": {
+  "texto": "Este vídeo mostra o voto secreto, a abstenção e os outros jeitos de votar. Você escolhe o modo na hora de colocar a pauta em votação.",
+  "quadros": 279,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    14,
+    176
+   ],
+   [
+    26,
+    274
+   ]
+  ]
+ },
+ "S09-02-Secreto": {
+  "texto": "O voto secreto já vem marcado. Desmarque só quando a comissão quiser o voto de cada um à vista, no telão, no painel e na ata. Com o voto secreto, o telão e o painel mostram só quem votou, sem o voto de cada um. No fim, aparecem só o placar e o resultado. O voto de cada pessoa não entra na ata e fica guardado para a secretaria, nos Votos nominais.",
+  "quadros": 754,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    6,
+    75
+   ],
+   [
+    26,
+    286
+   ],
+   [
+    45,
+    466
+   ],
+   [
+    54,
+    563
+   ],
+   [
+    72,
+    754
+   ]
+  ]
+ },
+ "S09-03-Abstencao": {
+  "texto": "Daqui em diante, nos exemplos, o voto é aberto. Em qualquer modo, quem não quiser votar toca em Me abstenho. Quem se abstém conta como quem já votou, mas a abstenção não vai para nenhum nome e aparece à parte na contagem. No painel, clique em Abstenção na linha de quem está sem celular.",
+  "quadros": 610,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    9,
+    110
+   ],
+   [
+    20,
+    243
+   ],
+   [
+    42,
+    473
+   ],
+   [
+    54,
+    605
+   ]
+  ]
+ },
+ "S09-04-Ordem": {
+  "texto": "No modo Ordenar os nomes, cada membro põe todos os nomes em ordem. No celular, a pessoa usa as setas para subir ou descer cada nome. Depois toca em Enviar minha ordem. Vence quem tiver a menor média de posição, ou seja, quem ficou, na média, mais perto do primeiro lugar.",
+  "quadros": 605,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    13,
+    150
+   ],
+   [
+    26,
+    305
+   ],
+   [
+    32,
+    393
+   ],
+   [
+    51,
+    601
+   ]
+  ]
+ },
+ "S09-05-Eliminacao": {
+  "texto": "Na eliminação, cada membro escolhe um nome por rodada, e você encerra cada rodada como de costume. Se ninguém passar da metade dos votos, o painel já marca os mais votados. Confira e clique em Abrir a segunda rodada. Os membros votam de novo, só nesses nomes. Repita até alguém ter a maioria.",
+  "quadros": 622,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    17,
+    210
+   ],
+   [
+    31,
+    353
+   ],
+   [
+    39,
+    453
+   ],
+   [
+    47,
+    552
+   ],
+   [
+    53,
+    618
+   ]
+  ]
+ },
+ "S09-06-Comissao": {
+  "texto": "Na eliminação, a rodada terminou sem maioria, mas a comissão decidiu por um nome? Cada nome tem um botão que começa com Comissão escolheu. Clique no botão do nome escolhido e confirme. O telão mostra Eleito pela comissão, e a ata registra isso. Depois, registre o resultado como de costume.",
+  "quadros": 636,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    14,
+    180
+   ],
+   [
+    24,
+    307
+   ],
+   [
+    32,
+    397
+   ],
+   [
+    43,
+    541
+   ],
+   [
+    50,
+    631
+   ]
+  ]
+ },
+ "S09-07-Varios": {
+  "texto": "No modo de escolher vários nomes, você define quantos nomes cada membro pode marcar. No celular, a pessoa marca os nomes e toca em Confirmar. Sem marcar ninguém, o voto fica em branco, que neste modo é a abstenção. O resultado mostra a lista, do mais votado ao menos votado.",
+  "quadros": 593,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    14,
+    182
+   ],
+   [
+    25,
+    311
+   ],
+   [
+    39,
+    466
+   ],
+   [
+    50,
+    588
+   ]
+  ]
+ },
+ "S09-08-Fim": {
+  "texto": "No próximo vídeo, os eleitos e a resposta de cada um, em Cargos e líderes.",
+  "quadros": 171,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    15,
+    167
+   ]
+  ]
+ },
+ "S10-01-Abertura": {
+  "texto": "Este vídeo mostra o que fazer com os eleitos, em Cargos e líderes.",
+  "quadros": 152,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    13,
+    148
+   ]
+  ]
+ },
+ "S10-02-Lideres": {
+  "texto": "No alto do painel, clique em Cargos e líderes. Ali estão os cargos da igreja, na ordem, com quem foi eleito para cada um. Quando a pessoa responder, clique em Aceitou ou em Recusou. A resposta aparece ao lado do nome.",
+  "quadros": 471,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    9,
+    113
+   ],
+   [
+    24,
+    266
+   ],
+   [
+    34,
+    395
+   ],
+   [
+    41,
+    464
+   ]
+  ]
+ },
+ "S10-03-Recusou": {
+  "texto": "Se a pessoa recusar, clique em Recusou e confirme na janela que aparece. A vaga volta para a lista de pautas do painel, e a comissão vota de novo.",
+  "quadros": 310,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    13,
+    163
+   ],
+   [
+    29,
+    305
+   ]
+  ]
+ },
+ "S10-04-Decididos": {
+  "texto": "Algum cargo já foi decidido antes? Escreva o nome no campo escrito A definir e clique em Salvar. O nome entra na lista como aceito. No cargo de Ancião, informe quantas vagas existem e clique em Salvar. Aparece um campo para cada vaga. Para mudar a lista de cargos, abra a caixa Editar a lista de cargos. Clique em Tirar no cargo que a igreja não tem e confirme. Para acrescentar um cargo, escreva o nome dele no campo Acrescentar cargo e clique em Acrescentar.",
+  "quadros": 982,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    6,
+    81
+   ],
+   [
+    18,
+    217
+   ],
+   [
+    25,
+    297
+   ],
+   [
+    37,
+    448
+   ],
+   [
+    43,
+    522
+   ],
+   [
+    57,
+    668
+   ],
+   [
+    69,
+    788
+   ],
+   [
+    85,
+    978
+   ]
+  ]
+ },
+ "S10-05-ListaIgreja": {
+  "texto": "Para anunciar os nomes, clique em Lista para ler à igreja. A janela de impressão abre com a lista. Ela mostra cada cargo, o nome da pessoa e se ela já aceitou. Imprima ou salve como pê dê éfe.",
+  "quadros": 428,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    11,
+    131
+   ],
+   [
+    19,
+    215
+   ],
+   [
+    32,
+    351
+   ],
+   [
+    39,
+    422
+   ]
+  ]
+ },
+ "S10-06-Fim": {
+  "texto": "No próximo vídeo, a ata e o fim do trabalho da comissão.",
+  "quadros": 120,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    12,
+    116
+   ]
+  ]
+ },
+ "S11-01-Abertura": {
+  "texto": "Este vídeo mostra a ata de cada noite e como fechar o trabalho da comissão, guardando tudo.",
+  "quadros": 185,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    17,
+    179
+   ]
+  ]
+ },
+ "S11-02-Ata": {
+  "texto": "No fim da noite, abra a gaveta Depois da reunião e clique em Gerar ata. Na janela de impressão, escolha Salvar como pê dê éfe. A ata não mostra o voto de cada um nas votações secretas. Esse voto sai nos Votos nominais e na planilha. Os dois são só da secretaria.",
+  "quadros": 591,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    15,
+    171
+   ],
+   [
+    25,
+    292
+   ],
+   [
+    37,
+    417
+   ],
+   [
+    46,
+    521
+   ],
+   [
+    52,
+    585
+   ]
+  ]
+ },
+ "S11-03-Encerrar": {
+  "texto": "As pautas ficam guardadas de uma noite para outra. Quando a comissão terminar todo o trabalho, clique em Assuntos encerrados, no fim da lista de Pautas, e confirme. Antes, não pode haver pauta em andamento. A ata vai para Atas antigas, e a lista de pautas fica limpa, inclusive as que não foram votadas. A lista de cargos e líderes continua.",
+  "quadros": 704,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    9,
+    105
+   ],
+   [
+    28,
+    326
+   ],
+   [
+    35,
+    423
+   ],
+   [
+    54,
+    625
+   ],
+   [
+    61,
+    700
+   ]
+  ]
+ },
+ "S11-04-Antigas": {
+  "texto": "Para imprimir de novo, abra a gaveta Depois da reunião e depois Atas antigas. Cada ata guardada tem a ata, os votos nominais e a planilha. Apagar tira a ata guardada de vez. O botão Apagar todas as pautas limpa a lista sem guardar a ata. Use só se não precisar dela.",
+  "quadros": 632,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    14,
+    183
+   ],
+   [
+    26,
+    326
+   ],
+   [
+    33,
+    418
+   ],
+   [
+    46,
+    565
+   ],
+   [
+    52,
+    627
+   ]
+  ]
+ },
+ "S11-05-Fim": {
+  "texto": "No último vídeo, o feedback da igreja pelo quê erre.",
+  "quadros": 120,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    10,
+    116
+   ]
+  ]
+ },
+ "S12-01-Abertura": {
+  "texto": "Este vídeo mostra o feedback que a igreja manda pelo quê erre fixo, para cada cargo.",
+  "quadros": 176,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    16,
+    170
+   ]
+  ]
+ },
+ "S12-02-Feedback": {
+  "texto": "No alto do painel, clique em Feedback. Ali fica o quê erre fixo da igreja. Clique em Baixar imagem do quê erre e ponha na apresentação do culto. Quem escaneia escolhe o cargo e escreve. Você lê tudo nessa tela, sem ver quem enviou. Repasse ao líder e clique em Marcar como lido. O recado passa para a aba Lidos.",
+  "quadros": 656,
+  "frases": [
+   [
+    0,
+    0
    ],
    [
     7,
     91
    ],
    [
-    11,
-    164
-   ],
-   [
-    21,
-    282
-   ],
-   [
-    31,
-    415
-   ]
-  ]
- },
- "T2-08-Encerrar": {
-  "texto": "Quando aparecer o aviso que diz Todos votaram, clique em Encerrar votação. O resultado aparece no telão.",
-  "quadros": 206,
-  "frases": [
-   [
-    0,
-    0
-   ],
-   [
-    12,
-    150
-   ],
-   [
-    17,
-    202
-   ]
-  ]
- },
- "T2-09-Registrar": {
-  "texto": "Agora registre o resultado. O painel já deixa marcado quem venceu e o cargo dele em Cargos e líderes. Confira e clique em Confirmar eleito. O nome vai para Cargos e líderes, aguardando a resposta da pessoa. Se errar, clique em Desfazer registro e confirme.",
-  "quadros": 592,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    4,
-    73
-   ],
-   [
-    19,
-    249
-   ],
-   [
-    25,
-    339
-   ],
-   [
-    37,
-    484
-   ],
-   [
-    45,
-    589
-   ]
-  ]
- },
- "T2-10-SimNao": {
-  "texto": "Depois, comece a próxima pauta e coloque em votação, como antes. Com um nome só, cada membro vota Sim ou Não. O nome é aprovado quando recebe mais Sim do que Não.",
-  "quadros": 345,
-  "frases": [
-   [
-    0,
-    0
-   ],
-   [
-    11,
-    147
-   ],
-   [
-    21,
-    258
-   ],
-   [
-    32,
-    341
-   ]
-  ]
- },
- "T2-11-Mudancas": {
-  "texto": "A pauta precisa esperar? Antes de colocar em votação, clique em Deixar para depois e confirme. Ela volta para a lista, com os nomes. Faltou um nome depois de abrir a votação? Clique em Corrigir indicados e confirme. Os votos dessa pauta são apagados, e ela volta às indicações para você acrescentar o nome. Depois coloque em votação de novo e confira o modo e o voto secreto. Encerrou cedo demais? Clique em Reabrir e confirme. Se o resultado já foi registrado, clique antes em Desfazer registro. A votação abre de novo, e todos votam outra vez.",
-  "quadros": 1335,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    4,
-    64
-   ],
-   [
-    16,
-    226
-   ],
-   [
-    24,
-    311
-   ],
-   [
-    32,
-    404
-   ],
-   [
-    38,
-    501
-   ],
-   [
-    54,
-    713
-   ],
-   [
-    68,
-    877
-   ],
-   [
-    71,
-    946
-   ],
-   [
-    76,
-    1019
-   ],
-   [
-    87,
-    1202
-   ],
-   [
-    97,
-    1331
-   ]
-  ]
- },
- "T2-12-Imprevistos": {
-  "texto": "Alguém chegou atrasado? O quê erre pequeno, no canto do telão, já serve. Se precisar dele grande, clique em Mostrar o quê erre no telão. Depois clique em Voltar à votação no telão. O telão volta a mostrar a votação. Se aparecer o aviso que diz Sem conexão, espere. O painel tenta de novo sozinho, e os votos já registrados não se perdem. Surgiu uma pauta fora da lista? Com o resultado da anterior registrado, escreva o cargo no campo chamado Pauta que não estava na lista. Depois clique em Criar e começar. A pauta começa na hora, pronta para as indicações.",
-  "quadros": 1352,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    3,
-    86
-   ],
-   [
-    13,
-    239
-   ],
-   [
-    25,
-    390
-   ],
-   [
-    33,
-    490
-   ],
-   [
-    40,
-    571
-   ],
-   [
-    49,
-    685
-   ],
-   [
-    63,
-    837
-   ],
-   [
-    69,
-    930
-   ],
-   [
-    87,
-    1159
-   ],
-   [
-    93,
-    1244
-   ],
-   [
-    102,
-    1352
-   ]
-  ]
- },
- "T2-13-Fim": {
-  "texto": "No próximo vídeo, os outros modos de votação, o voto secreto e a abstenção.",
-  "quadros": 160,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    14,
-    157
-   ]
-  ]
- },
- "T3-01-Abertura": {
-  "texto": "Este vídeo mostra o voto secreto, a abstenção e os outros jeitos de votar. Você escolhe o modo na hora de colocar a pauta em votação.",
-  "quadros": 295,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    14,
-    188
-   ],
-   [
-    26,
-    291
-   ]
-  ]
- },
- "T3-02-Secreto": {
-  "texto": "O voto secreto já vem marcado. Desmarque só quando a comissão quiser o voto de cada um à vista, no telão, no painel e na ata. Com o voto secreto, o telão e o painel mostram só quem votou, sem o voto de cada um. No fim, aparecem só o placar e o resultado. O voto de cada pessoa não entra na ata e fica guardado para a secretaria, nos Votos nominais.",
-  "quadros": 852,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    6,
-    83
-   ],
-   [
-    26,
-    293
-   ],
-   [
-    45,
-    531
-   ],
-   [
-    54,
-    653
-   ],
-   [
-    72,
-    847
-   ]
-  ]
- },
- "T3-03-Abstencao": {
-  "texto": "Daqui em diante, nos exemplos, o voto é aberto. Em qualquer modo, quem não quiser votar toca em Me abstenho. Quem se abstém conta como quem já votou, mas a abstenção não vai para nenhum nome e aparece à parte na contagem. No painel, clique em Abstenção na linha de quem está sem celular.",
-  "quadros": 683,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    9,
-    126
-   ],
-   [
-    20,
-    284
-   ],
-   [
-    42,
-    529
-   ],
-   [
-    54,
-    679
-   ]
-  ]
- },
- "T3-04-Ordem": {
-  "texto": "No modo Ordenar os nomes, cada membro põe todos os nomes em ordem. No celular, a pessoa usa as setas para subir ou descer cada nome. Depois toca em Enviar minha ordem. Vence quem tiver a menor média de posição, ou seja, quem ficou, na média, mais perto do primeiro lugar.",
-  "quadros": 628,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    13,
-    156
-   ],
-   [
-    26,
-    315
-   ],
-   [
-    32,
-    395
-   ],
-   [
-    51,
-    628
-   ]
-  ]
- },
- "T3-05-Eliminacao": {
-  "texto": "Na eliminação, cada membro escolhe um nome por rodada, e você encerra cada rodada como de costume. Se ninguém passar da metade dos votos, o painel já marca os mais votados. Confira e clique em Abrir a segunda rodada. Os membros votam de novo, só nesses nomes. Repita até alguém ter a maioria.",
-  "quadros": 721,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    17,
-    263
-   ],
-   [
-    31,
-    444
-   ],
-   [
-    39,
-    545
-   ],
-   [
-    47,
-    646
-   ],
-   [
-    53,
-    718
-   ]
-  ]
- },
- "T3-06-Comissao": {
-  "texto": "Na eliminação, a rodada terminou sem maioria, mas a comissão decidiu por um nome? Cada nome tem um botão que começa com Comissão escolheu. Clique no botão do nome escolhido e confirme. O telão mostra Eleito pela comissão, e a ata registra isso. Depois, registre o resultado como de costume.",
-  "quadros": 701,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    14,
-    200
-   ],
-   [
-    24,
-    334
-   ],
-   [
-    32,
-    438
-   ],
-   [
-    43,
-    599
-   ],
-   [
-    50,
-    697
-   ]
-  ]
- },
- "T3-07-Varios": {
-  "texto": "No modo de escolher vários nomes, você define quantos nomes cada membro pode marcar. No celular, a pessoa marca os nomes e toca em Confirmar. Sem marcar ninguém, o voto fica em branco, que neste modo é a abstenção. O resultado mostra a lista, do mais votado ao menos votado.",
-  "quadros": 634,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    14,
-    187
-   ],
-   [
-    25,
-    327
-   ],
-   [
-    39,
-    508
-   ],
-   [
-    50,
-    630
-   ]
-  ]
- },
- "T3-08-Fim": {
-  "texto": "No último vídeo, o que fazer depois da reunião, com os líderes, a ata e o feedback.",
-  "quadros": 179,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    17,
-    179
-   ]
-  ]
- },
- "T4-01-Abertura": {
-  "texto": "Este vídeo mostra o que fazer depois das votações, com os eleitos, a ata e o feedback.",
-  "quadros": 155,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    17,
-    154
-   ]
-  ]
- },
- "T4-02-Lideres": {
-  "texto": "No alto do painel, clique em Cargos e líderes. Ali estão os cargos da igreja, na ordem, com quem foi eleito para cada um. Quando a pessoa responder, clique em Aceitou ou em Recusou. A resposta aparece ao lado do nome.",
-  "quadros": 520,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    9,
-    121
-   ],
-   [
-    24,
-    318
-   ],
-   [
-    34,
-    442
-   ],
-   [
-    41,
-    516
-   ]
-  ]
- },
- "T4-03-Recusou": {
-  "texto": "Se a pessoa recusar, clique em Recusou e confirme na janela que aparece. A vaga volta para a lista de pautas do painel, e a comissão vota de novo.",
-  "quadros": 288,
-  "frases": [
-   [
-    0,
-    0
-   ],
-   [
-    13,
-    144
-   ],
-   [
-    29,
-    284
-   ]
-  ]
- },
- "T4-04-Decididos": {
-  "texto": "Algum cargo já foi decidido antes? Escreva o nome no campo escrito A definir e clique em Salvar. O nome entra na lista como aceito. No cargo de Ancião, informe quantas vagas existem e clique em Salvar. Aparece um campo para cada vaga. Para mudar a lista de cargos, abra a caixa Editar a lista de cargos. Clique em Tirar no cargo que a igreja não tem e confirme. Para acrescentar um cargo, escreva o nome dele no campo Acrescentar cargo e clique em Acrescentar.",
-  "quadros": 937,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    6,
-    88
-   ],
-   [
-    18,
-    206
-   ],
-   [
-    25,
-    300
-   ],
-   [
-    37,
-    471
-   ],
-   [
-    43,
-    552
-   ],
-   [
-    57,
-    679
-   ],
-   [
-    69,
-    780
-   ],
-   [
-    85,
-    933
-   ]
-  ]
- },
- "T4-05-ListaIgreja": {
-  "texto": "Para anunciar os nomes, clique em Lista para ler à igreja. A janela de impressão abre com a lista. Ela mostra cada cargo, o nome da pessoa e se ela já aceitou. Imprima ou salve como pê dê éfe.",
-  "quadros": 427,
-  "frases": [
-   [
-    0,
-    0
-   ],
-   [
-    11,
-    116
-   ],
-   [
-    19,
-    205
-   ],
-   [
-    32,
-    355
-   ],
-   [
-    39,
-    424
-   ]
-  ]
- },
- "T4-06-Ata": {
-  "texto": "No fim da noite, abra o bloco Depois da reunião e clique em Gerar ata. Na janela de impressão, escolha Salvar como pê dê éfe. A ata não mostra o voto de cada um nas votações secretas. Esse voto sai nos Votos nominais e na planilha. Os dois são só da secretaria.",
-  "quadros": 648,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
     15,
-    179
-   ],
-   [
-    25,
-    334
-   ],
-   [
-    37,
-    472
-   ],
-   [
-    46,
-    590
-   ],
-   [
-    52,
-    647
-   ]
-  ]
- },
- "T4-07-Apagar": {
-  "texto": "Quando a comissão terminar todo o trabalho, gere a ata e só então clique em Apagar todas as pautas e confirme. Isso não dá para desfazer. A lista de cargos e líderes continua guardada.",
-  "quadros": 390,
-  "frases": [
-   [
-    0,
-    0
-   ],
-   [
-    21,
-    235
-   ],
-   [
-    26,
-    306
-   ],
-   [
-    34,
-    386
-   ]
-  ]
- },
- "T4-08-Feedback": {
-  "texto": "No alto do painel, clique em Feedback. Ali fica o quê erre fixo da igreja. Clique em Baixar imagem do quê erre e ponha na apresentação do culto. Quem escaneia escolhe o cargo e escreve. Você lê tudo nessa tela, sem ver quem enviou. Repasse ao líder e clique em Marcar como lido. O recado passa para a aba Lidos.",
-  "quadros": 728,
-  "frases": [
-   [
-    0,
-    3
-   ],
-   [
-    7,
-    108
-   ],
-   [
-    15,
-    194
+    175
    ],
    [
     28,
-    355
+    310
    ],
    [
     35,
-    455
+    396
    ],
    [
     44,
-    580
+    488
    ],
    [
     53,
-    666
+    584
    ],
    [
     60,
-    724
+    651
    ]
   ]
  },
- "T4-09-Fim": {
+ "S12-03-Fim": {
   "texto": "Pronto. Agora você já sabe usar o app do começo ao fim. Bom trabalho na comissão.",
-  "quadros": 201,
+  "quadros": 173,
   "frases": [
    [
     0,
-    3
+    0
    ],
    [
     1,
-    36
+    23
    ],
    [
     12,
-    151
+    122
    ],
    [
     16,
-    197
+    168
+   ]
+  ]
+ },
+ "M1-01-Abertura": {
+  "texto": "Este vídeo mostra como participar da reunião da comissão de nomeações pelo celular. Você não precisa instalar nada.",
+  "quadros": 231,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    13,
+    165
+   ],
+   [
+    18,
+    227
+   ]
+  ]
+ },
+ "M1-02-Entrar": {
+  "texto": "No começo da reunião, aponte a câmera do celular para o quê erre do telão e toque no link que aparece. Toque no seu nome e confirme. Pronto. Agora é só esperar a votação abrir.",
+  "quadros": 370,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    21,
+    210
+   ],
+   [
+    27,
+    277
+   ],
+   [
+    28,
+    292
+   ],
+   [
+    35,
+    365
+   ]
+  ]
+ },
+ "M1-03-Longe": {
+  "texto": "Está longe do telão? Abra no celular o endereço que aparece embaixo do quê erre, digite os seis números e toque em Entrar. Depois toque no seu nome e confirme. Tocou no nome errado? Avise a secretaria. O celular fica sem acesso até ela liberar o nome, e aí você escaneia de novo.",
+  "quadros": 600,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    4,
+    53
+   ],
+   [
+    23,
+    260
+   ],
+   [
+    30,
+    349
+   ],
+   [
+    34,
+    389
+   ],
+   [
+    37,
+    434
+   ],
+   [
+    53,
+    596
+   ]
+  ]
+ },
+ "M1-04-Indicar": {
+  "texto": "Durante a discussão, se a secretaria liberar, você pode indicar um nome. Escreva e toque em Indicar. O nome aparece no telão, com o seu nome embaixo. Mudou de ideia? Toque em Tirar minha indicação, antes de a votação começar.",
+  "quadros": 495,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    12,
+    148
+   ],
+   [
+    17,
+    233
+   ],
+   [
+    27,
+    334
+   ],
+   [
+    30,
+    372
+   ],
+   [
+    40,
+    489
+   ]
+  ]
+ },
+ "M1-05-Mao": {
+  "texto": "Quer falar? Toque em Levantar a mão para falar. Seu nome entra na fila do telão, e o celular mostra a sua posição. Desistiu? Toque em Baixar a mão. Durante a votação, o botão some.",
+  "quadros": 396,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    2,
+    34
+   ],
+   [
+    9,
+    103
+   ],
+   [
+    23,
+    242
+   ],
+   [
+    24,
+    274
+   ],
+   [
+    29,
+    323
+   ],
+   [
+    35,
+    389
+   ]
+  ]
+ },
+ "M1-06-Votar": {
+  "texto": "Quando a votação abrir, toque no nome em que você vota. Você pode trocar o voto até a secretaria encerrar a votação. Com um nome só, toque em Sim ou em Não. Se não quiser votar, toque em Me abstenho.",
+  "quadros": 428,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    11,
+    111
+   ],
+   [
+    22,
+    236
+   ],
+   [
+    32,
+    332
+   ],
+   [
+    40,
+    422
+   ]
+  ]
+ },
+ "M1-07-Outros": {
+  "texto": "Às vezes a votação pede a ordem dos nomes. Use as setas para subir ou descer cada nome, e toque em Enviar minha ordem. Outras vezes, você pode marcar mais de um nome. Marque e toque em Confirmar. No voto secreto, o telão mostra só que você votou, sem o seu voto.",
+  "quadros": 603,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    9,
+    100
+   ],
+   [
+    24,
+    285
+   ],
+   [
+    33,
+    382
+   ],
+   [
+    38,
+    460
+   ],
+   [
+    52,
+    598
+   ]
+  ]
+ },
+ "M1-08-Fim": {
+  "texto": "Pronto. Deixe o celular carregado e a internet ligada. Bom trabalho na comissão.",
+  "quadros": 171,
+  "frases": [
+   [
+    0,
+    0
+   ],
+   [
+    1,
+    24
+   ],
+   [
+    9,
+    124
+   ],
+   [
+    13,
+    166
    ]
   ]
  }

@@ -1,6 +1,7 @@
-// Gera roteiro-narracao.md a partir das falas dos quatro vídeos (src/tutorial/v*.ts) e
+// Gera roteiro-narracao.md a partir das falas dos vídeos (src/tutorial/s*.ts e m1-celular.ts) e
 // confere se cada fala está pronta para TTS. Rode antes de cada render:
 //   node scripts/tutorial/gerar-roteiro.mjs
+//   node scripts/tutorial/gerar-roteiro.mjs --so-falas   sem conferir as capturas
 // Sai com erro se alguma fala tiver dígito, símbolo, sigla ou marca fora do começo de frase,
 // ou se um plano apontar para uma marca que não existe.
 import { readFile, writeFile } from 'node:fs/promises';
@@ -8,13 +9,11 @@ import path from 'node:path';
 import {
   FPS, contarPalavras, marcasDa, quadrosDaCena, textoFalado,
 } from '../../src/tutorial/tempo.ts';
-import { V1 } from '../../src/tutorial/v1-preparacao.ts';
-import { V2 } from '../../src/tutorial/v2-reuniao.ts';
-import { V3 } from '../../src/tutorial/v3-modos.ts';
-import { V4 } from '../../src/tutorial/v4-depois.ts';
+import { VIDEOS } from '../../src/tutorial/videos.ts';
 
 const RAIZ = path.resolve(import.meta.dirname, '../..');
-const VIDEOS = [V1, V2, V3, V4];
+// --so-falas: confere só as falas e as marcas, antes de as capturas existirem
+const SO_FALAS = process.argv.includes('--so-falas');
 const CAPTURAS = JSON.parse(await readFile(path.join(RAIZ, 'src/tutorial/capturas.json'), 'utf8'));
 const APARELHOS = ['painel', 'telao', 'celular', 'folha'];
 
@@ -61,7 +60,7 @@ function conferirFala(video, cena) {
   const comecoDaFala = cena.fala.trimStart().startsWith(`{${primeiro.em}}`);
   if (primeiro.em !== 'inicio' && !comecoDaFala) problemas.push(`${onde}: o primeiro plano não vale no quadro 0`);
   if (!primeiro.layout) problemas.push(`${onde}: o primeiro plano não diz o layout`);
-  conferirCapturas(onde, cena);
+  if (!SO_FALAS) conferirCapturas(onde, cena);
 }
 
 // Toda captura e todo alvo citados num plano existem no capturas.json, no aparelho certo, e o alvo
@@ -143,13 +142,13 @@ for (const video of VIDEOS) {
 }
 
 const md =
-  '# Roteiro de narração do tutorial da secretária\n\n' +
-  'Quatro vídeos, cada um com as cenas na mesma ordem e com o mesmo nome das sequências do Remotion. ' +
+  '# Roteiro de narração do tutorial\n\n' +
+  'Doze vídeos da secretária e um do membro, cada um com as cenas na mesma ordem e com o mesmo nome das sequências do Remotion. ' +
   'Os tempos contam a partir do começo de cada vídeo. A duração de cada cena é o número de palavras dividido por 2,5, ' +
   'mais 0,5 s de respiro no fim. Início e fim estão em mm:ss, arredondados para baixo; a duração exata é a de cada ' +
   'cena, em segundos com uma casa, e as cenas vêm uma depois da outra, sem intervalo.\n\n' +
-  'Este arquivo é gerado por `node scripts/tutorial/gerar-roteiro.mjs` a partir de `src/tutorial/v1-preparacao.ts` a ' +
-  '`v4-depois.ts`. Para mudar uma fala, mude lá e gere de novo: o vídeo e este roteiro saem da mesma fonte.\n\n' +
+  'Este arquivo é gerado por `node scripts/tutorial/gerar-roteiro.mjs` a partir de `src/tutorial/s01-primeiro-acesso.ts` a ' +
+  '`s12-feedback.ts` e `m1-celular.ts`. Para mudar uma fala, mude lá e gere de novo: o vídeo e este roteiro saem da mesma fonte.\n\n' +
   partes.join('\n') +
   '\n## Texto corrido para o TTS\n\n' +
   'O jeito mais seguro é gerar um áudio por cena, com o texto de cada cena acima. Confira que a fala de cada ' +

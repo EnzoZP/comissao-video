@@ -1,9 +1,10 @@
-// Capturas reais do app para o tutorial da secretária.
+// Capturas reais do app para o tutorial (secretária e membro).
 //
-// O app de verdade (a pasta acima desta) roda DENTRO deste processo: as páginas abrem no endereço de
+// O app de verdade (../app, ao lado desta pasta) roda DENTRO deste processo: as páginas abrem no endereço de
 // produção, para o QR e os textos mostrarem o endereço certo, mas todo pedido é atendido aqui
 // (route.fulfill). Os handlers de api/ são chamados direto, contra o branch de teste do Neon
-// cujo endereço está em .env.tutorial (fora do git). Nada sai para a produção:
+// cujo endereço vem de DATABASE_URL e TUTORIAL_ENDPOINT: no ambiente do comando ou num
+// .env.tutorial (fora do git), se ele existir. Nada sai para a produção:
 //   - outra origem é abortada, e o Chrome não resolve nome nenhum (MAP * ~NOTFOUND);
 //   - os pedidos feitos pelo próprio script usam um host .invalid;
 //   - o banco só é escrito depois da guarda: endpoint do branch, marcador que só existe nele e
@@ -11,7 +12,8 @@
 //
 // Uso:
 //   node scripts/tutorial/capturar.mjs --so-rotas   confere o roteamento, sem banco
-//   node scripts/tutorial/capturar.mjs              zera o branch, monta a história e captura
+//   DATABASE_URL='…' TUTORIAL_ENDPOINT=ep-… node scripts/tutorial/capturar.mjs
+//                                                   zera o branch, monta a história e captura
 //
 // Saída (trocada de uma vez no fim): public/tutorial/capturas/<id>.png e
 // src/tutorial/capturas.json, com a caixa de cada alvo em px CSS da captura.
@@ -22,7 +24,7 @@ import { pathToFileURL } from 'node:url';
 import { randomBytes } from 'node:crypto';
 
 const RAIZ = path.resolve(import.meta.dirname, '../..');
-const APP = path.resolve(RAIZ, '..');
+const APP = path.resolve(RAIZ, '../app');
 const PUBLICO = path.join(APP, 'public');
 const ORIGEM = 'https://comissao-votacao.vercel.app';
 const HOST_INTERNO = 'http://tutorial.invalid';
@@ -223,9 +225,10 @@ function vigiar(pagina, nome) {
   });
 }
 
-async function novaPagina(contexto, nome) {
+// rotulo: a origem dos erros anotados (o celular de cada pessoa tem o seu)
+async function novaPagina(contexto, nome, rotulo = nome) {
   const pagina = await contexto.newPage();
-  vigiar(pagina, nome);
+  vigiar(pagina, rotulo);
   pagina.aparelho = nome;
   return pagina;
 }
@@ -308,7 +311,7 @@ async function rolarTopo(pagina) {
 
 // Caixa de cada alvo, conferida: um só elemento, inteiro na tela e não coberto por outro.
 // Alvo { sel, parcial: true } pode passar da tela (bloco grande): a caixa é recortada.
-// Alvo { sel, uniao: true }: a caixa que junta todos os elementos (cada um conferido).
+// Alvo { sel, uniao: true }: a caixa que junta todos os elementos (cada um conferido; com parcial, recortado).
 async function medir(pagina, alvos) {
   const caixas = {};
   for (const [nome, spec] of Object.entries(alvos)) {
@@ -317,7 +320,7 @@ async function medir(pagina, alvos) {
       const n = await pagina.locator(sel).filter({ visible: true }).count();
       if (n < 2) throw new Error(`${pagina.aparelho}: alvo de união "${nome}" casou ${n} elementos`);
       const partes = [];
-      for (let i = 0; i < n; i++) partes.push((await medir(pagina, { parte: { sel: `${sel} >> nth=${i}` } })).parte);
+      for (let i = 0; i < n; i++) partes.push((await medir(pagina, { parte: { sel: `${sel} >> nth=${i}`, parcial } })).parte);
       const x = Math.min(...partes.map((p) => p.x)); const y = Math.min(...partes.map((p) => p.y));
       const x2 = Math.max(...partes.map((p) => p.x + p.w)); const y2 = Math.max(...partes.map((p) => p.y + p.h));
       caixas[nome] = { x, y, w: Math.round((x2 - x) * 10) / 10, h: Math.round((y2 - y) * 10) / 10 };
@@ -399,9 +402,14 @@ async function capturar(pagina, id, alvos = {}, extra = {}) {
 // Banco: guarda e limpeza
 
 async function prepararBanco() {
-  process.loadEnvFile(path.join(RAIZ, '.env.tutorial'));
+  // a conexão vem de .env.tutorial ou, sem o arquivo, das variáveis de ambiente do comando
+  try {
+    process.loadEnvFile(path.join(RAIZ, '.env.tutorial'));
+  } catch (e) {
+    if (e.code !== 'ENOENT') throw e;
+  }
   const { DATABASE_URL, TUTORIAL_ENDPOINT } = process.env;
-  if (!DATABASE_URL || !TUTORIAL_ENDPOINT) throw new Error('.env.tutorial incompleto');
+  if (!DATABASE_URL || !TUTORIAL_ENDPOINT) throw new Error('faltam DATABASE_URL e TUTORIAL_ENDPOINT (.env.tutorial ou ambiente)');
   if (!new URL(DATABASE_URL).hostname.startsWith(`${TUTORIAL_ENDPOINT}.`)) {
     throw new Error('DATABASE_URL não aponta para o endpoint do branch do tutorial');
   }
@@ -481,7 +489,16 @@ const P = {
   colocar: '#agora button:has-text("Colocar em votação")',
   encerrar: '#agora button:has-text("Encerrar votação")',
   linhaDe: (nome) => `#agora ul.lista > li:has(strong:text-is("${nome}"))`,
+  // a pauta começa pelo "Começar" da linha dela, na lista de Pautas
+  comecarNa: (cargo) => `#pautas li:has-text("${cargo}") button:text-is("Começar")`,
+  liberarCelular: '#agora .indicacao-celular button',
+  filaMaos: '#agora .fila-mao-painel',
 };
+
+// Gaveta (<details>) aberta ou fechada; o painel só abre sozinho a da vez.
+async function gaveta(pagina, id, aberta = true) {
+  await pagina.evaluate(([i, a]) => { document.getElementById(i).open = a; }, [id, aberta]);
+}
 
 async function historia() {
   await prepararBanco();
@@ -507,7 +524,7 @@ async function historia() {
     const telao = await novaPagina(ctxTelaoOutro, 'telao');
     const celulares = {};
     const celular = async (nome) => {
-      if (!celulares[nome]) celulares[nome] = await novaPagina(await novoAparelho(navegador, 'celular'), 'celular');
+      if (!celulares[nome]) celulares[nome] = await novaPagina(await novoAparelho(navegador, 'celular'), 'celular', `celular ${nome}`);
       return celulares[nome];
     };
 
@@ -547,8 +564,9 @@ async function historia() {
       }
     };
 
-    // ======================================= VÍDEO 1 ======================================
-    console.log('Vídeo 1: preparação');
+    // A história segue a ordem da reunião; cada vídeo usa as capturas dela que lhe servem.
+    // ======================================= PREPARAÇÃO ===================================
+    console.log('Preparação');
 
     // Convite e conta
     await painel.goto(`${ORIGEM}/convite#${convite}`);
@@ -572,6 +590,7 @@ async function historia() {
     await capturar(painel, 'painel-inicio', {
       barra: P.barra, selo: '#selo-estado', sair: '#sair', tema: '#tema', agora: P.agora,
       pautas: '#pautas-sec', lideres: '#link-lideres', feedback: '#link-feedback',
+      membros: '#barra button[data-ir="passo-membros"]', ajuda: '#barra button[data-ir="secao-ajuda"]',
     });
 
     // Sair e entrar de novo, lembrando
@@ -611,12 +630,14 @@ async function historia() {
     await rolar(painel, '#passo-membros');
     await capturar(painel, 'painel-membros-lista', {
       lista: { sel: '#membros', parcial: true },
+      ana: '#membros li:has-text("Ana")',
       copiar: '#membros li:has-text("Ana") button:has-text("Copiar link")',
       novo: '#membros li:has-text("Ana") button:has-text("Novo link")',
     });
     await lerTokensMembros();
 
     // Telão
+    await gaveta(painel, 'preparacao');
     await rolar(painel, '#passo-telao');
     await capturar(painel, 'painel-telao-passo', { secao: '#passo-telao', gerar: '#novo-telao' });
     await painel.click('#novo-telao');
@@ -645,7 +666,20 @@ async function historia() {
     await telao.click('.telao-codigo button');
     await ver(telao, '#telao:has-text("Aguardando a primeira pauta")');
 
+    // Quórum (gaveta Mais), para a tela do QR mostrar quantos faltam
+    await gaveta(painel, 'mais');
+    await rolar(painel, '#form-quorum', 300);
+    await painel.fill('#quorum', '9');
+    await painel.locator('#quorum').blur();
+    await capturar(painel, 'painel-quorum', {
+      form: '#form-quorum', campo: '#quorum', salvar: '#form-quorum button[type=submit]',
+    });
+    await painel.click('#form-quorum button[type=submit]');
+    await ver(painel, '#status-quorum:has-text("Quórum 9")');
+    await gaveta(painel, 'mais', false);
+
     // Entrada pelo QR
+    await gaveta(painel, 'preparacao');
     await rolar(painel, '#passo-entrada');
     const dialogoEntrada = esperarDialogo(painel, 'Abrir a entrada pelo QR?');
     await capturar(painel, 'painel-entrada-fechada', {
@@ -661,6 +695,7 @@ async function historia() {
     await ver(telao, '.entrada-qr');
     const alvosQrTelao = {
       qr: '.entrada-qr', passos: '.entrada-passos', curto: '.entrada-curto', grade: '.entrada-grade', selo: '.topo .selo',
+      quorum: '.entrada-quorum',
     };
     await capturar(telao, 'telao-qr-0', alvosQrTelao);
 
@@ -675,7 +710,15 @@ async function historia() {
     await ver(ana, '#conteudo:has-text("Aguardando a próxima votação")');
     await capturar(ana, 'celular-aguardando', { saudacao: '#saudacao', status: '#conteudo' });
 
-    for (const nome of ['Carla', 'Davi', 'Elisa', 'Fábio', 'Gabriela', 'Henrique']) await entrarPeloQr(nome);
+    // alguém toca no nome da Carla por engano, num celular de verdade (o "sem acesso", adiante)
+    const intruso = await celular('intruso');
+    await intruso.goto(`${ORIGEM}/entrar#${entrada.codigo}`);
+    await ver(intruso, 'button.candidato:text-is("Carla")');
+    const dialogoIntruso = esperarDialogo(intruso, 'Você é Carla?');
+    await Promise.all([intruso.waitForURL('**/votar'), intruso.click('button.candidato:text-is("Carla")')]);
+    await dialogoIntruso;
+    await ver(intruso, '#conteudo:has-text("Aguardando a próxima votação")');
+    for (const nome of ['Davi', 'Elisa', 'Fábio', 'Gabriela', 'Henrique']) await entrarPeloQr(nome);
     await ver(telao, '.topo .selo:has-text("7 de 12")');
     await capturar(telao, 'telao-qr-7', alvosQrTelao);
 
@@ -710,6 +753,12 @@ async function historia() {
     });
     await painel.click('#membros li:has-text("Carla") button:has-text("Liberar")');
     registro['painel-membros-liberar'].dialogo = await dialogoLiberar;
+    // o celular de quem tocou no nome errado perde o acesso na próxima consulta
+    await ver(intruso, '#aviso:has-text("não tem acesso")');
+    // o 401 da consulta é justamente o que tira o acesso
+    erros.splice(0, erros.length, ...erros.filter((e) => !(e.startsWith('celular intruso console') && e.includes('status of 401'))));
+    await capturar(intruso, 'celular-sem-acesso', { aviso: '#aviso' });
+    await intruso.close();
     const novato = await celular('Carla');
     await novato.goto(`${ORIGEM}/entrar#${entrada.codigo}`);
     await ver(novato, 'button.candidato:text-is("Carla")');
@@ -718,19 +767,19 @@ async function historia() {
 
     // Tema escuro, e de volta ao claro
     await rolarTopo(painel);
-    await painel.click('#tema [data-tema="escuro"]');
+    await painel.click('#tema'); // claro → escuro
     await painel.waitForFunction(() => document.documentElement.dataset.theme === 'dark');
     await capturar(painel, 'painel-tema-escuro', { tema: '#tema', barra: P.barra });
     await atualizar(telao);
     await telao.waitForFunction(() => document.documentElement.dataset.theme === 'dark');
     await capturar(telao, 'telao-qr-escuro', alvosQrTelao);
-    await painel.click('#tema [data-tema="claro"]');
+    await painel.click('#tema'); // escuro → claro
     await painel.waitForFunction(() => document.documentElement.dataset.theme === 'light');
     await atualizar(telao);
     await telao.waitForFunction(() => document.documentElement.dataset.theme === 'light');
 
-    // ======================================= VÍDEO 2 ======================================
-    console.log('Vídeo 2: a reunião');
+    // ======================================= A REUNIÃO ====================================
+    console.log('A reunião');
 
     await rolarTopo(painel);
     await painel.evaluate(() => { document.getElementById('caixa-pauta-nova').open = true; });
@@ -744,16 +793,36 @@ async function historia() {
     await capturar(painel, 'painel-pautas-digitadas', alvosPautaNova);
     await painel.click('#caixa-pauta-nova button[type=submit]');
     await ver(painel, `#pautas li:has-text("${PAUTAS.at(-1)}")`);
-    await ver(painel, '#agora button:has-text("Começar: Diretor de Música")');
+    await ver(painel, P.comecarNa('Diretor de Música'));
     await rolarTopo(painel);
     await capturar(painel, 'painel-pautas-lista', {
-      lista: { sel: '#pautas', parcial: true }, comecar: '#agora button:has-text("Começar: Diretor de Música")',
+      lista: { sel: '#pautas', parcial: true }, comecar: P.comecarNa('Diretor de Música'),
     });
+
+    // As gavetas recolhidas, abaixo da mesa, e o "?" de um bloco
+    for (const id of ['preparacao', 'depois', 'mais']) await gaveta(painel, id, false);
+    await rolar(painel, '#preparacao', 300);
+    await capturar(painel, 'painel-gavetas', {
+      // só a primeira: a página não rola o bastante para as três caberem inteiras
+      gavetas: '#preparacao > summary',
+    });
+    await rolarTopo(painel);
+    await painel.click('#agora-sec button.ajuda');
+    await ver(painel, '#ajuda-agora');
+    await capturar(painel, 'painel-ajuda-bloco', { botao: '#agora-sec button.ajuda', texto: { sel: '#ajuda-agora', parcial: true } });
+    await painel.click('#agora-sec button.ajuda');
+    // Ajuda, na barra: desce até o WhatsApp, no fim de Mais
+    await painel.click('#barra button[data-ir="secao-ajuda"]');
+    await ver(painel, '#secao-ajuda');
+    await rolar(painel, '#secao-ajuda', 300);
+    await capturar(painel, 'painel-ajuda', { contato: '#secao-ajuda' });
+    await gaveta(painel, 'mais', false);
+    await rolarTopo(painel);
 
     for (const nome of ['Isabel', 'Lívia', 'Marcos']) await entrarPeloQr(nome);
 
     // Diretor de Música: indicações
-    await painel.click('#agora button:has-text("Começar: Diretor de Música")');
+    await painel.click(P.comecarNa('Diretor de Música'));
     await ver(painel, P.campoIndicado);
     await rolarTopo(painel);
     await capturar(painel, 'painel-indicacao-vazia', {
@@ -765,20 +834,55 @@ async function historia() {
     await painel.fill(P.campoIndicado, 'Paulo');
     await capturar(painel, 'painel-indicacao-digitando', { campo: P.campoIndicado });
     await painel.press(P.campoIndicado, 'Enter');
-    for (const nome of ['Rute', 'Sérgio']) {
-      await ver(painel, P.campoIndicado);
-      await painel.fill(P.campoIndicado, nome);
-      await painel.press(P.campoIndicado, 'Enter');
-    }
-    await ver(painel, '#agora ul.lista-nomes li:has-text("Sérgio")');
+    await ver(painel, '#agora ul.lista-nomes li:has-text("Paulo")');
     await painel.locator(P.campoIndicado).blur();
+
+    // Rute e Sérgio vêm do celular: a Ana indica pela tela, o Bruno pela API
+    await rolarTopo(painel);
+    await capturar(painel, 'painel-indicacao-liberar', { agora: { sel: P.agora, parcial: true }, liberar: P.liberarCelular });
+    await painel.click(P.liberarCelular);
+    await ver(painel, `${P.liberarCelular}:has-text("Fechar indicação pelo celular")`);
+    await ver(ana, 'input[name=indicado]');
+    const alvosIndicar = { campo: 'input[name=indicado]', indicar: 'form.form-indicado button[type=submit]' };
+    await capturar(ana, 'celular-indicar', alvosIndicar);
+    await ana.fill('input[name=indicado]', 'Rute');
+    await ana.locator('input[name=indicado]').blur();
+    await capturar(ana, 'celular-indicar-digitado', alvosIndicar);
+    await ana.click('form.form-indicado button[type=submit]');
+    await ver(ana, 'button:has-text("Tirar minha indicação")');
+    await capturar(ana, 'celular-indicou', { tirar: 'button:has-text("Tirar minha indicação")', minha: '.minha-indicacao' });
+    await api('votar', { acao: 'indicar', pautaId: await pautaId('Diretor de Música'), nome: 'Sérgio' }, tokensMembros.Bruno);
+    await ver(painel, '#agora ul.lista-nomes li:has-text("Sérgio")');
     await rolarTopo(painel);
     await capturar(painel, 'painel-indicacao-3', {
       lista: '#agora ul.lista-nomes', tirar: '#agora ul.lista-nomes li:has-text("Rute") button.tirar',
+      legenda: '#agora ul.lista-nomes li:has-text("Rute") .legenda', fechar: P.liberarCelular,
       form: { sel: '#agora form.votar-indicacao', parcial: true },
     });
     await ver(telao, '.indicados:has-text("Sérgio")');
-    await capturar(telao, 'telao-indicacao-3', { indicados: '.indicados', topo: '.topo' });
+    await capturar(telao, 'telao-indicacao-3', {
+      indicados: '.indicados', topo: '.topo', legenda: '.indicados li:has-text("Rute") .legenda',
+    });
+
+    // Pedir a palavra: a Ana levanta pela tela; Carla e Davi, pela API
+    await ver(ana, '#mao button');
+    await capturar(ana, 'celular-mao', { mao: '#mao button' });
+    await ana.click('#mao button');
+    await ver(ana, '#mao button:has-text("Baixar a mão")');
+    await capturar(ana, 'celular-mao-levantada', { mao: '#mao button', posicao: '#mao p' });
+    for (const nome of ['Carla', 'Davi']) await api('votar', { acao: 'mao_levantar' }, tokensMembros[nome]);
+    await ver(telao, '#fila-mao:has-text("Davi")');
+    await capturar(telao, 'telao-maos', { fila: '#fila-mao' });
+    await ver(painel, `${P.filaMaos}:has-text("Davi")`);
+    await rolarTopo(painel);
+    await capturar(painel, 'painel-maos', {
+      fila: P.filaMaos, falou: `${P.filaMaos} button[aria-label^="Ana já falou"]`,
+      limpar: `${P.filaMaos} button:has-text("Limpar a fila")`,
+    });
+    await painel.click(`${P.filaMaos} button[aria-label^="Ana já falou"]`);
+    await ver(painel, `${P.filaMaos}:not(:has-text("Ana"))`);
+    await rolarTopo(painel);
+    await capturar(painel, 'painel-maos-falou', { fila: P.filaMaos, limpar: `${P.filaMaos} button:has-text("Limpar a fila")` });
     await ver(ana, '#conteudo:has-text("Sérgio")');
     await capturar(ana, 'celular-indicacao', { cartao: '.cartao' });
 
@@ -839,11 +943,14 @@ async function historia() {
     await rolar(painel, '#agora .registro', 120);
     await capturar(painel, 'painel-registrado', {
       registrado: '#agora .registro.registrado', desfazer: '#agora button:has-text("Desfazer registro")',
-      proxima: '#agora button:has-text("Começar: Tesoureiro")',
+    });
+    await rolarTopo(painel);
+    await capturar(painel, 'painel-proxima-lista', {
+      lista: { sel: '#pautas', parcial: true }, comecar: P.comecarNa('Tesoureiro'),
     });
 
     // Tesoureiro: Sim ou Não, com o QR para quem chegou atrasado e a abstenção da Ana
-    await painel.click('#agora button:has-text("Começar: Tesoureiro")');
+    await painel.click(P.comecarNa('Tesoureiro'));
     await ver(painel, P.campoIndicado);
     await painel.fill(P.campoIndicado, 'Rute');
     await painel.press(P.campoIndicado, 'Enter');
@@ -893,7 +1000,7 @@ async function historia() {
 
     // Deixar para depois: a Comunicação, da lista
     await mostrarNaColuna(painel, '#pautas li:has-text("Comunicação")');
-    await painel.click('#pautas li:has-text("Comunicação") button:has-text("Começar")');
+    await painel.click(P.comecarNa('Comunicação'));
     await ver(painel, P.campoIndicado);
     await ver(painel, '#agora:has-text("Comunicação")');
     for (const nome of ['Vítor', 'Yara']) {
@@ -908,7 +1015,7 @@ async function historia() {
     await painel.click('#agora form.votar-indicacao button:has-text("Deixar para depois")');
     registro['painel-indicacao-adiar'].dialogo = await dialogoAdiar;
     await ver(painel, '#pautas li:has-text("Comunicação"):has-text("Yara"):has(button:has-text("Começar"))');
-    await ver(painel, '#agora button:has-text("Começar: Ministério Jovem")');
+    await ver(painel, P.comecarNa('Ministério Jovem'));
     await mostrarNaColuna(painel, '#pautas li:has-text("Comunicação")');
     await capturar(painel, 'painel-pautas-adiada', {
       comunicacao: '#pautas li:has-text("Comunicação")', lista: { sel: '#pautas', parcial: true },
@@ -917,7 +1024,8 @@ async function historia() {
     // Ministério Jovem: corrigir indicados na 1ª votação, voto secreto com os três nomes, reabrir.
     // Painel e telão de um mesmo instante são capturados depois de os dois mostrarem a mesma
     // contagem (o polling de cada um anda no seu tempo).
-    await painel.click('#agora button:has-text("Começar: Ministério Jovem")');
+    await mostrarNaColuna(painel, '#pautas li:has-text("Ministério Jovem")');
+    await painel.click(P.comecarNa('Ministério Jovem'));
     await ver(painel, P.campoIndicado);
     for (const nome of ['Caio', 'Lara']) {
       await painel.fill(P.campoIndicado, nome);
@@ -1012,12 +1120,13 @@ async function historia() {
     await dialogoAdiarMulher;
     await ver(painel, '#pautas li:has-text("Ministério da Mulher"):has(button:has-text("Começar"))');
 
-    // ======================================= VÍDEO 3 ======================================
-    console.log('Vídeo 3: outros modos');
+    // ======================================= OUTROS MODOS =================================
+    console.log('Outros modos');
 
     const comecarCom = async (cargo, nomes, { modo, secreto = false, max } = {}) => {
-      await ver(painel, `#agora button:has-text("Começar: ${cargo}")`);
-      await painel.click(`#agora button:has-text("Começar: ${cargo}")`);
+      await ver(painel, P.comecarNa(cargo));
+      await mostrarNaColuna(painel, `#pautas li:has-text("${cargo}")`);
+      await painel.click(P.comecarNa(cargo));
       await ver(painel, P.campoIndicado);
       for (const nome of nomes) {
         await painel.fill(P.campoIndicado, nome);
@@ -1157,8 +1266,8 @@ async function historia() {
     await painel.click('#agora .registro button:has-text("Confirmar")');
     await ver(painel, '#agora .registro.registrado');
 
-    // ======================================= VÍDEO 4 ======================================
-    console.log('Vídeo 4: depois da reunião');
+    // ======================================= DEPOIS DA REUNIÃO ============================
+    console.log('Depois da reunião');
 
     await rolarTopo(painel);
     await capturar(painel, 'painel-barra-lideres', { lideres: '#link-lideres', feedback: '#link-feedback', barra: P.barra });
@@ -1256,9 +1365,6 @@ async function historia() {
       nominaisPlanilha: { sel: '#votos-nominais, #baixar-csv', uniao: true },
     };
     await capturar(painel, 'painel-depois', alvosDepois);
-    const dialogoApagar = esperarDialogo(painel, 'Apagar TODAS as pautas', { aceitar: false });
-    await painel.click('#apagar-pautas');
-    registro['painel-depois'].dialogoApagar = await dialogoApagar;
     await abrirFolha(painel, '#ata-pdf', 'Ata — Comissão de Nomeações');
     await capturarFolha(painel, 'folha-ata', {
       titulo: { sel: 'h1' }, resumo: { sel: '.ata-resumo' },
@@ -1269,13 +1375,51 @@ async function historia() {
     await abrirFolha(painel, '#votos-nominais', 'ATENÇÃO');
     await capturarFolha(painel, 'folha-votos-nominais', { capa: { sel: '.ata-capa' }, restrito: { sel: '.ata-restrito' } });
 
-    // Apagar todas as pautas (a ata já foi gerada): o painel fica vazio e os líderes ficam
-    const dialogoApagarDeVez = esperarDialogo(painel, 'Apagar TODAS as pautas');
-    await painel.click('#apagar-pautas');
-    await dialogoApagarDeVez;
+    // Assuntos encerrados (a ata já foi gerada): a ata vai para Atas antigas, a lista fica vazia
+    // e os líderes ficam
+    await gaveta(painel, 'depois', false);
+    await ver(painel, '#linha-encerrar:not([hidden])');
+    await mostrarNaColuna(painel, '#linha-encerrar');
+    const dialogoEncerrar = esperarDialogo(painel, 'Guardar a ata destas pautas');
+    await capturar(painel, 'painel-encerrar', {
+      coluna: { sel: '#pautas-sec', parcial: true }, linha: '#linha-encerrar', encerrar: '#encerrar-assuntos',
+    });
+    await painel.click('#encerrar-assuntos');
+    registro['painel-encerrar'].dialogo = await dialogoEncerrar;
     await ver(painel, '#pautas:has-text("Nenhuma pauta")');
     await rolarTopo(painel);
-    await capturar(painel, 'painel-apagado', { barra: P.barra, feedback: '#link-feedback', lideres: '#link-lideres', pautas: '#pautas-sec' });
+    await capturar(painel, 'painel-encerrado', { barra: P.barra, feedback: '#link-feedback', lideres: '#link-lideres', pautas: '#pautas-sec' });
+
+    await gaveta(painel, 'depois');
+    await gaveta(painel, 'caixa-atas-antigas');
+    await ver(painel, '#atas-antigas li button:has-text("Ata (PDF)")');
+    await rolar(painel, '#depois', 80);
+    await capturar(painel, 'painel-atas-antigas', {
+      caixa: { sel: '#caixa-atas-antigas', parcial: true }, linha: '#atas-antigas li', ata: '#atas-antigas li .linha',
+      apagar: '#apagar-pautas',
+    });
+    await gaveta(painel, 'caixa-atas-antigas', false);
+    await gaveta(painel, 'depois', false);
+
+    // Membros em lote: quem aceitou cargo entra na comissão; o Remover todos é recusado no diálogo
+    await gaveta(painel, 'preparacao');
+    await gaveta(painel, 'caixa-membros');
+    await rolar(painel, '#membros-lideres', 420);
+    const alvosLote = {
+      botoes: { sel: '#membros-lideres, #membros-remover-todos', uniao: true },
+      lideres: '#membros-lideres', remover: '#membros-remover-todos',
+    };
+    await capturar(painel, 'painel-membros-lote', alvosLote);
+    await painel.click('#membros-lideres');
+    await ver(painel, '#aviso:has-text("adicionad")');
+    await rolar(painel, '#membros-lideres', 420);
+    await capturar(painel, 'painel-membros-lote-feito', alvosLote);
+    const dialogoRemover = esperarDialogo(painel, 'Remover TODOS os membros', { aceitar: false });
+    await painel.click('#membros-remover-todos');
+    registro['painel-membros-lote-feito'].dialogo = await dialogoRemover;
+    await gaveta(painel, 'caixa-membros', false);
+    await gaveta(painel, 'preparacao', false);
+
     await Promise.all([painel.waitForURL('**/lideres'), painel.click('#link-lideres')]);
     await ver(painel, '#cargos :text("Celso")');
     await rolar(painel, '#cargos section.cargo-lideres:has(h3:text-is("Ministério da Saúde"))', 260);

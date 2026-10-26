@@ -2,7 +2,7 @@
 // duração das cenas e o quadro de cada marca. Rode depois de trocar algum áudio:
 //   node scripts/tutorial/medir-voz.mjs
 //
-// Entrada: public/tutorial/voz/<id da cena>.wav, um por cena (gerados no CapCut, voz Júlia).
+// Entrada: public/tutorial/voz/<id da cena>.wav, um por cena (gerados no ElevenLabs, voz Amanda, modelo eleven_v4).
 // Para cada áudio, acha as pausas (silencedetect do ffmpeg que vem no Remotion) e casa cada
 // começo de frase do texto com uma pausa: a mais perto da posição esperada (proporcional aos
 // caracteres), em ordem e preferindo pausas longas, que são as de fim de frase. Frase sem pausa
@@ -11,10 +11,7 @@ import { execFileSync, spawnSync } from 'node:child_process';
 import { existsSync, readdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { FPS, contarPalavras, textoFalado } from '../../src/tutorial/tempo.ts';
-import { V1 } from '../../src/tutorial/v1-preparacao.ts';
-import { V2 } from '../../src/tutorial/v2-reuniao.ts';
-import { V3 } from '../../src/tutorial/v3-modos.ts';
-import { V4 } from '../../src/tutorial/v4-depois.ts';
+import { VIDEOS } from '../../src/tutorial/videos.ts';
 
 const RAIZ = path.resolve(import.meta.dirname, '../..');
 const PASTA = path.join(RAIZ, 'public/tutorial/voz');
@@ -116,7 +113,7 @@ const voz = {};
 const relatorio = [];
 const semAudio = [];
 const falhas = [];
-for (const video of [V1, V2, V3, V4]) {
+for (const video of VIDEOS) {
   for (const cena of video.cenas) {
     const arq = path.join(PASTA, `${cena.id}.wav`);
     if (!existsSync(arq)) { semAudio.push(cena.id); continue; }
